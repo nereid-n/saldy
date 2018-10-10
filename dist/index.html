@@ -5,13 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Index Page</title>
+    <link href="assets/libs/mCustomScrollbar/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+    <link href="assets/libs/select2/select2.min.css" rel="stylesheet">
+    <link href="assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
   </head>
   <body>
     <div class="root">
-      <div class="header">
-      </div>
+      <header class="header">
+        <nav class="header__nav"><a href="#">О Нас</a><a href="#">Как заказать</a><a href="#">Доставка</a><a href="#">Новости</a><a href="#">Отзывы</a><a href="#">Поставщикам</a><a href="#">Контакты</a>
+        </nav>
+        <div class="header__points"><img src="assets/images/icons/Plane.png"/>
+          <div class="header__select wrap-select">
+            <select class="select">
+              <option>Москва</option>
+              <option>Санкт-Петербург</option>
+              <option>Екатеринбург</option>
+              <option>Томск</option>
+              <option>Краснодар</option>
+              <option>Архангельск</option>
+              <option>Владивосток</option>
+              <option>Красноярск</option>
+            </select>
+          </div><span class="c-pink fz12">(1308 пунктов)</span>
+        </div>
+      </header>
+      <section class="header-bottom">
+        <div class="header-bottom__logo-wrap">
+          <div class="logo">
+            <div class="logo__top"><span class="logo__main c-pink">saldy</span>
+              <div class="logo__circle bg-black"><span>s</span>
+              </div>
+            </div><span class="logo__bottom">Скидки каждый день</span>
+          </div>
+        </div>
+        <form class="header-bottom__search">
+          <div class="input-btn">
+            <input class="input-width-btn" placeholder="Я ищу..."/>
+            <button class="header-bottom__search-btn btn btn-with-input bg-pink"><i class="fa fa-search"></i>
+            </button>
+          </div>
+        </form>
+        <div class="header-bottom__list">
+          <div class="header-bottom__list-item">
+            <div class="header-bottom__list-icon"><img class="inject-me" src="assets/images/icons/shopping-cart.svg"/>
+              <div class="count">3</div>
+            </div><a href="#">Корзина</a>
+          </div>
+          <div class="header-bottom__list-item">
+            <div class="header-bottom__list-icon"><img class="inject-me" src="assets/images/icons/favorite.svg"/>
+              <div class="count">0</div>
+            </div><a href="#">Избранное</a>
+          </div>
+          <div class="header-bottom__list-item header-bottom__reg">
+            <div class="header-bottom__list-icon"><img class="inject-me" src="assets/images/icons/avatar.svg"/>
+            </div>
+            <div class="d-flex"><a href="#">Войти</a><span class="px5">/</span><a href="#">Регистрация</a></div>
+            <div class="header-bottom__reg-dropdown-wrap">
+              <div class="header-bottom__reg-dropdown"><a class="btn bg-pink width100">Войти</a><span class="c-gray fz12 my10">Войдите через</span>
+                <div class="social"><a class="social__item bg-vk" href="#"><i class="fa fa-vk"></i></a><a class="social__item bg-fb" href="#"><i class="fa fa-facebook"></i></a><a class="social__item bg-ok" href="#"><i class="fa fa-odnoklassniki"></i></a>
+                </div><span class="c-gray fz12 my10">Новый покупатель?</span><a class="btn bg-gold width100">Регистрация</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <nav class="menu">
+        <div class="menu__btn"><i class="fa fa-bars"></i>КАТАЛОГ
+        </div>
+        <div class="menu__list"><a class="menu__active" href="#">Лэшмейкер</a><a href="#">Ногтевой сервис</a><a href="#">Бровист</a><a href="#">Шугаринг</a><a href="#">SHOP</a>
+        </div>
+      </nav>
     </div>
+    <script src="assets/libs/jquery-3.3.1.min.js"></script>
+    <script src="assets/libs/svg-injector.js"></script>
+    <script src="assets/libs/select2/select2.min.js"></script>
+    <script src="assets/libs/mCustomScrollbar/jquery.mCustomScrollbar.js"></script>
     <script src="assets/js/script.js"></script>
   </body>
 </html>

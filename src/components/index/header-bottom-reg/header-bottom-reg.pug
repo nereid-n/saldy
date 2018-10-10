@@ -1,0 +1,44 @@
+mixin header-bottom-reg()
+  +b.header-bottom
+    +e.logo-wrap
+      +b.logo
+        +e.top
+          +e('span').main.c-pink saldy
+          +e.circle.bg-black
+            span s
+        +e('span').bottom Скидки каждый день
+    +e('form').search
+      .input-btn
+        input.input-width-btn(placeholder="Я ищу...")
+        +e('button').search-btn.btn.btn-with-input.bg-pink
+          i.fa.fa-search
+    +e.list
+      +e.list-item
+        +e.list-icon
+          img.inject-me(src="assets/images/icons/shopping-cart.svg")
+          div.count 3
+        a(href="#") Корзина
+      +e.list-item
+        +e.list-icon
+          img.inject-me(src="assets/images/icons/favorite.svg")
+          div.count 0
+        a(href="#") Избранное
+      +e.list-item.__reg
+        +e.list-icon
+          img.inject-me(src="assets/images/icons/avatar.svg")
+          div.count с
+        div.d-flex
+          a(href="#") Личный кабинет
+        +e.reg-dropdown-wrap
+          +e.reg-dropdown
+            +e('ul').reg-dropdown-list
+              li
+                a(href="#") Мои заказы
+              li
+                a(href="#") Избранное
+              li
+                a(href="#") Личные данные
+              li
+                a(href="#") Настройки
+              li
+                a(href="#") Выход

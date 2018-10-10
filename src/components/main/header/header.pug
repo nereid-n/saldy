@@ -1,2 +1,23 @@
 mixin header()
-  +b.header
+  +b('header').header
+    +e('nav').nav
+      a(href="#") О Нас
+      a(href="#") Как заказать
+      a(href="#") Доставка
+      a(href="#") Новости
+      a(href="#") Отзывы
+      a(href="#") Поставщикам
+      a(href="#") Контакты
+    +e.points
+      img(src="assets/images/icons/Plane.png")
+      +e.select.wrap-select
+        select.select
+          option Москва
+          option Санкт-Петербург
+          option Екатеринбург
+          option Томск
+          option Краснодар
+          option Архангельск
+          option Владивосток
+          option Красноярск
+      span.c-pink.fz12 (1308 пунктов)

@@ -1,3 +1,45 @@
 mixin header-bottom()
-	+b.header-bottom
-		block
+  +b('section').header-bottom
+    +e.logo-wrap
+      +b.logo
+        +e.top
+          +e('span').main.c-pink saldy
+          +e.circle.bg-black
+            span s
+        +e('span').bottom Скидки каждый день
+    +e('form').search
+      .input-btn
+        input.input-width-btn(placeholder="Я ищу...")
+        +e('button').search-btn.btn.btn-with-input.bg-pink
+          i.fa.fa-search
+    +e.list
+      +e.list-item
+        +e.list-icon
+          img.inject-me(src="assets/images/icons/shopping-cart.svg")
+          div.count 3
+        a(href="#") Корзина
+      +e.list-item
+        +e.list-icon
+          img.inject-me(src="assets/images/icons/favorite.svg")
+          div.count 0
+        a(href="#") Избранное
+      +e.list-item.__reg
+        +e.list-icon
+          img.inject-me(src="assets/images/icons/avatar.svg")
+        div.d-flex
+          a(href="#") Войти
+          span.px5 /
+          a(href="#") Регистрация
+        +e.reg-dropdown-wrap
+          +e.reg-dropdown
+            a.btn.bg-pink.width100 Войти
+            span.c-gray.fz12.my10 Войдите через
+            +b.social
+              +e('a').item.bg-vk(href="#")
+                i.fa.fa-vk
+              +e('a').item.bg-fb(href="#")
+                i.fa.fa-facebook
+              +e('a').item.bg-ok(href="#")
+                i.fa.fa-odnoklassniki
+            span.c-gray.fz12.my10 Новый покупатель?
+            a.btn.bg-gold.width100 Регистрация

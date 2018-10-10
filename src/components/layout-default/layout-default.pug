@@ -1,5 +1,7 @@
 include ../../../node_modules/bemto.pug/bemto
 include ../main/header/header
+include ../main/header-bottom/header-bottom
+include ../main/menu/menu
 
 doctype html
 html(lang='ru')
@@ -11,9 +13,18 @@ html(lang='ru')
     block head
     title= pageTitle || ''
 
+    link(href='assets/libs/mCustomScrollbar/jquery.mCustomScrollbar.min.css' rel='stylesheet')
+    link(href='assets/libs/select2/select2.min.css' rel='stylesheet')
+    link(href='assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css' rel='stylesheet')
     link(href='assets/css/style.css' rel='stylesheet')
   body
     .root
       +header()
+      +header-bottom()
+      +menu()
       block content
+    script(src='assets/libs/jquery-3.3.1.min.js')
+    script(src='assets/libs/svg-injector.js')
+    script(src='assets/libs/select2/select2.min.js')
+    script(src='assets/libs/mCustomScrollbar/jquery.mCustomScrollbar.js')
     script(src='assets/js/script.js')

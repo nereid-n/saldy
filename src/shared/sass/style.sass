@@ -3,8 +3,26 @@
 body
   margin: 0
 
+*
+  box-sizing: border-box
+
 .root
+  max-width: 1170px
+  margin: 0 auto
   font-family: $lato
   font-size: 14px
   line-height: 1.2em
   color: $black
+
+a
+  color: $link
+  text-decoration: underline
+  transition: $transition
+  &:hover
+    text-decoration: none
+
+img,
+svg
+  max-width: 100%
+  height: auto
+  width: auto
