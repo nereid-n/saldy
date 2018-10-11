@@ -4,25 +4,120 @@
   display: flex
   align-items: center
   flex-wrap: wrap
-  padding: 20px
+  flex-direction: row-reverse
+  justify-content: flex-end
+  padding: 0 20px
   border-bottom: 1px solid $border-light-gray
-  &__btn
+  &__btn-catalog
     display: flex
     align-items: center
-    margin-right: 20px
+    margin: 20px 30px 20px 0
+    color: inherit
+    background-color: transparent
+    border: none
+    cursor: pointer
     .fa-bars
       margin-right: 10px
       font-size: 21px
   &__list
     display: flex
     flex-wrap: wrap
-    margin: -20px 0
-    a
-      padding: 23px 0 19px
-      margin: 0 20px
-      color: inherit
-      text-decoration: none
-      &:hover
-        color: $pink
+  &__item
+    padding: 24px 0 20px
+    margin: 0 20px
+    color: inherit
+    text-decoration: none
+    &:hover
+      color: $pink
   &__active
     border-bottom: 3px solid $pink
+    &:hover
+      color: inherit
+      cursor: default
+  &__catalog
+    display: none
+    position: absolute
+    z-index: 200
+    top: calc(100% + 1px)
+    left: -20px
+    width: 270px
+    padding: 0 0 32px
+    margin: 0
+    list-style: none
+    background-color: #fff
+    border-bottom: 1px solid $border-light-gray
+    border-right: 1px solid $border-light-gray
+    &-active
+      display: block
+    &-wrap
+      position: relative
+    &-item
+      position: relative
+      display: block
+      width: 100%
+      padding: 10px 20px
+      cursor: pointer
+      background-color: #fff
+      &:after
+        position: relative
+        content: ""
+        right: 0
+      &:hover
+        color: $pink
+      &-wrap
+        &:hover
+          &>.menu__right-menu-wrap
+            z-index: 100
+            height: unset
+            min-height: 100%
+            opacity: 1
+          .menu__catalog-item
+            z-index: 101
+            box-shadow: -7px 0 15px rgba(0, 0, 0, 0.2)
+    &-link
+      a
+        display: block
+        width: 100%
+        padding: 10px 20px
+        color: $pink
+        text-decoration: none
+        &:hover
+          text-decoration: underline
+  &__right-menu
+    display: flex
+    flex-wrap: wrap
+    width: 100%
+    padding: 20px 10px 10px 20px
+    background-color: #fff
+    &-wrap
+      position: absolute
+      top: 0
+      left: 100%
+      height: 0
+      width: 730px
+      max-width: calc(100vw - 270px)
+      opacity: 0
+      box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.2)
+      transition: $transition
+      overflow: hidden
+      @media (max-width: 575px)
+        position: static
+        width: 100%
+        min-width: 100%
+        max-height: 295px
+        overflow: scroll
+    &-block
+      display: flex
+      flex-direction: column
+      width: 230px
+      padding: 0 10px 20px
+      @media (max-width: 575px)
+        width: 100%
+    &-link
+      padding: 5px 0
+      color: inherit
+      text-decoration: none
+      &:first-of-type
+        margin-top: 5px
+      &:hover
+        color: $pink

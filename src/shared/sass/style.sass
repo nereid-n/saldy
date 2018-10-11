@@ -4,15 +4,23 @@ body
   margin: 0
 
 *
+  line-height: 1.2em
   box-sizing: border-box
 
+html
+  font-size: 14px
+
 .root
+  display: flex
+  flex-direction: column
   max-width: 1170px
+  min-height: 100vh
   margin: 0 auto
   font-family: $lato
-  font-size: 14px
-  line-height: 1.2em
   color: $black
+
+.main
+  flex-grow: 1
 
 a
   color: $link

@@ -8,6 +8,8 @@
     <link href="assets/libs/mCustomScrollbar/jquery.mCustomScrollbar.min.css" rel="stylesheet">
     <link href="assets/libs/select2/select2.min.css" rel="stylesheet">
     <link href="assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/libs/slick/slick.css" rel="stylesheet">
+    <link href="assets/libs/video.js/video-js.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
   </head>
   <body>
@@ -30,7 +32,7 @@
           </div><span class="c-pink fz12">(1308 пунктов)</span>
         </div>
       </header>
-      <section class="header-bottom">
+      <div class="header-bottom">
         <div class="header-bottom__logo-wrap">
           <div class="logo">
             <div class="logo__top"><span class="logo__main c-pink">saldy</span>
@@ -59,28 +61,361 @@
           </div>
           <div class="header-bottom__list-item header-bottom__reg">
             <div class="header-bottom__list-icon"><img class="inject-me" src="assets/images/icons/avatar.svg"/>
+              <div class="count">с</div>
             </div>
-            <div class="d-flex"><a href="#">Войти</a><span class="px5">/</span><a href="#">Регистрация</a></div>
+            <div class="d-flex"><a href="#">Личный кабинет</a></div>
             <div class="header-bottom__reg-dropdown-wrap">
-              <div class="header-bottom__reg-dropdown"><a class="btn bg-pink width100">Войти</a><span class="c-gray fz12 my10">Войдите через</span>
-                <div class="social"><a class="social__item bg-vk" href="#"><i class="fa fa-vk"></i></a><a class="social__item bg-fb" href="#"><i class="fa fa-facebook"></i></a><a class="social__item bg-ok" href="#"><i class="fa fa-odnoklassniki"></i></a>
-                </div><span class="c-gray fz12 my10">Новый покупатель?</span><a class="btn bg-gold width100">Регистрация</a>
+              <div class="header-bottom__reg-dropdown">
+                <ul class="header-bottom__reg-dropdown-list">
+                  <li><a href="#">Мои заказы</a></li>
+                  <li><a href="#">Избранное</a></li>
+                  <li><a href="#">Личные данные</a></li>
+                  <li><a href="#">Настройки</a></li>
+                  <li><a href="#">Выход</a></li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
       <nav class="menu">
-        <div class="menu__btn"><i class="fa fa-bars"></i>КАТАЛОГ
+        <div class="menu__list"><a class="menu__item menu__active" href="#">Лэшмейкер</a><a class="menu__item" href="#">Ногтевой сервис</a><a class="menu__item" href="#">Бровист</a><a class="menu__item" href="#">Шугаринг</a><a class="menu__item" href="#">SHOP</a>
         </div>
-        <div class="menu__list"><a class="menu__active" href="#">Лэшмейкер</a><a href="#">Ногтевой сервис</a><a href="#">Бровист</a><a href="#">Шугаринг</a><a href="#">SHOP</a>
+        <div class="menu__catalog-wrap">
+          <button class="menu__btn-catalog"><i class="fa fa-bars"></i>КАТАЛОГ
+          </button>
+          <ul class="menu__catalog menu__catalog-active">
+            <li class="menu__catalog-link"><a href="#">Все Совместные Покупки</a>
+            </li>
+            <li class="menu__catalog-item-wrap"><span class="menu__catalog-item">Бренды</span>
+              <div class="menu__right-menu-wrap">
+                <div class="menu__right-menu">
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a><a class="menu__right-menu-link" href="#">Праймеры</a><a class="menu__right-menu-link" href="#">Ремуверы</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a><a class="menu__right-menu-link" href="#">Праймеры</a><a class="menu__right-menu-link" href="#">Ремуверы</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Хранение</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Хранение</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Фирменные товары</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Фирменные товары</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="menu__catalog-item-wrap"><span class="menu__catalog-item">Наращивание ресниц</span>
+              <div class="menu__right-menu-wrap">
+                <div class="menu__right-menu">
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a><a class="menu__right-menu-link" href="#">Праймеры</a><a class="menu__right-menu-link" href="#">Ремуверы</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a><a class="menu__right-menu-link" href="#">Праймеры</a><a class="menu__right-menu-link" href="#">Ремуверы</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Хранение</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Хранение</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Фирменные товары</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Фирменные товары</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="menu__catalog-item-wrap"><span class="menu__catalog-item">Оборудование</span>
+              <div class="menu__right-menu-wrap">
+                <div class="menu__right-menu">
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a><a class="menu__right-menu-link" href="#">Праймеры</a><a class="menu__right-menu-link" href="#">Ремуверы</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a><a class="menu__right-menu-link" href="#">Праймеры</a><a class="menu__right-menu-link" href="#">Ремуверы</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Хранение</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Хранение</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Фирменные товары</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Фирменные товары</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="menu__catalog-item-wrap"><span class="menu__catalog-item">Оформление бровей</span>
+              <div class="menu__right-menu-wrap">
+                <div class="menu__right-menu">
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a><a class="menu__right-menu-link" href="#">Праймеры</a><a class="menu__right-menu-link" href="#">Ремуверы</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a><a class="menu__right-menu-link" href="#">Праймеры</a><a class="menu__right-menu-link" href="#">Ремуверы</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Хранение</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Хранение</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Фирменные товары</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Фирменные товары</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="menu__catalog-item-wrap"><span class="menu__catalog-item">Косметика</span>
+              <div class="menu__right-menu-wrap">
+                <div class="menu__right-menu">
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a><a class="menu__right-menu-link" href="#">Праймеры</a><a class="menu__right-menu-link" href="#">Ремуверы</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a><a class="menu__right-menu-link" href="#">Праймеры</a><a class="menu__right-menu-link" href="#">Ремуверы</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Хранение</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Хранение</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Фирменные товары</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Фирменные товары</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="menu__catalog-item-wrap"><span class="menu__catalog-item">Аксессуары</span>
+              <div class="menu__right-menu-wrap">
+                <div class="menu__right-menu">
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a><a class="menu__right-menu-link" href="#">Праймеры</a><a class="menu__right-menu-link" href="#">Ремуверы</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a><a class="menu__right-menu-link" href="#">Праймеры</a><a class="menu__right-menu-link" href="#">Ремуверы</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Хранение</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Хранение</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Фирменные товары</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Фирменные товары</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="menu__catalog-item-wrap"><span class="menu__catalog-item">Ламинирование и биозавивка</span>
+              <div class="menu__right-menu-wrap">
+                <div class="menu__right-menu">
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a><a class="menu__right-menu-link" href="#">Праймеры</a><a class="menu__right-menu-link" href="#">Ремуверы</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a><a class="menu__right-menu-link" href="#">Праймеры</a><a class="menu__right-menu-link" href="#">Ремуверы</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Хранение</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Хранение</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Фирменные товары</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Фирменные товары</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="menu__catalog-item-wrap"><span class="menu__catalog-item">Шугаринг</span>
+              <div class="menu__right-menu-wrap">
+                <div class="menu__right-menu">
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a><a class="menu__right-menu-link" href="#">Праймеры</a><a class="menu__right-menu-link" href="#">Ремуверы</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a><a class="menu__right-menu-link" href="#">Праймеры</a><a class="menu__right-menu-link" href="#">Ремуверы</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Хранение</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Хранение</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Фирменные товары</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Фирменные товары</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="menu__catalog-item-wrap"><span class="menu__catalog-item">Фирменная одежда</span>
+              <div class="menu__right-menu-wrap">
+                <div class="menu__right-menu">
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a><a class="menu__right-menu-link" href="#">Праймеры</a><a class="menu__right-menu-link" href="#">Ремуверы</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a><a class="menu__right-menu-link" href="#">Праймеры</a><a class="menu__right-menu-link" href="#">Ремуверы</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Хранение</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Хранение</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Фирменные товары</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Фирменные товары</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
       </nav>
+      <main class="main">
+        <section class="index-banner-section">
+          <div class="index-banner">
+            <div class="index-banner__item"><img class="index-banner__img" src="assets/images/index/banner.jpg" alt="" role="presentation"/>
+            </div>
+            <div class="index-banner__item"><img class="index-banner__img" src="assets/images/index/banner.jpg" alt="" role="presentation"/>
+            </div>
+            <div class="index-banner__item"><img class="index-banner__img" src="assets/images/index/banner.jpg" alt="" role="presentation"/>
+            </div>
+          </div>
+        </section>
+        <div class="index-main">
+          <div class="index-main__item">
+            <div class="index-main__block">
+              <div class="index-main__block-text">
+                <h3 class="mb10 mt0 fw-bold fz30">Материалы <br> для наращивания</h3><span class="fz18">EXTREME LOOK</span>
+                <p class="mt30">Ресницы для наращивания, клей, препараты и аксессуары.</p>
+                <button class="btn bg-pink mt60">В каталог</button>
+              </div>
+              <div class="index-main__block-img"><img src="assets/images/index/img1.png"/>
+              </div>
+            </div>
+          </div>
+          <div class="index-main__item">
+            <video class="index-main__video video-js" controls="controls" preload="auto" data-setup="{&quot;fluid&quot;: true}">
+              <source src="assets/video/post_video.mp4"/>
+            </video>
+          </div>
+        </div>
+        <div class="index-soon">
+        </div>
+        <div class="index-leaders">
+        </div>
+        <div class="index-category">
+        </div>
+        <div class="index-brands">
+        </div>
+        <div class="index-action">
+        </div>
+        <div class="index-news-reviews">
+        </div>
+      </main>
+      <div class="footer">
+        <div class="footer__top">
+          <div class="footer__item"><span class="footer__title">Покупателям</span><a class="footer__link" href="#">Как  заказать</a><a class="footer__link" href="#">Доставка</a><a class="footer__link" href="#">Оплата</a><a class="footer__link" href="#">Возврат товаров</a><a class="footer__link" href="#">Пользовательское <br> соглашение</a>
+          </div>
+          <div class="footer__item"><span class="footer__title">Компания</span><a class="footer__link" href="#">О нас</a><a class="footer__link" href="#">Отзывы</a><a class="footer__link" href="#">Новости</a><a class="footer__link" href="#">Контакты</a>
+          </div>
+          <div class="footer__item"><span class="footer__title">ПРИНИМАЕМ ОПЛАТУ</span>
+            <div class="social">
+              <div class="social__item"><img src="assets/images/footer/viza.png"/>
+              </div>
+              <div class="social__item"><img src="assets/images/footer/mast1.png"/>
+              </div>
+              <div class="social__item"><img src="assets/images/footer/mast2.png"/>
+              </div>
+            </div><span class="footer__title footer__title-second">ПОДПИСКА НА НОВОСТИ</span>
+            <form class="footer__search">
+              <div class="input-btn">
+                <input class="input-width-btn" placeholder="Введите email"/>
+                <button class="footer__search-btn btn btn-with-input bg-pink"><i class="fa fa-angle-right"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="footer__item"><span class="footer__title">МЫ В ОНЛАЙН-ЧАТАХ</span>
+            <div class="social"><a class="social__item" href="#"><img src="assets/images/footer/viber.png"/></a><a class="social__item" href="#"><img src="assets/images/footer/whatsapp.png"/></a><a class="social__item" href="#"><img src="assets/images/footer/telegram.png"/></a>
+            </div><span class="footer__title footer__title-second">МЫ В СОЦСЕТЯХ</span>
+            <div class="social"><a class="social__item social__link bg-vk" href="#"><i class="fa fa-vk"></i></a><a class="social__item social__link bg-fb" href="#"><i class="fa fa-facebook"></i></a><a class="social__item social__link bg-ok" href="#"><i class="fa fa-odnoklassniki"></i></a>
+            </div>
+          </div>
+          <div class="footer__item"><span class="footer__title">КОНТАКТЫ</span><span class="footer__text">Тел.: 8 800 100-44-99</span><span class="footer__text">Моб.: +7-985-100-44-99</span><span class="footer__text">
+            Адрес: г. Москва, <br>ул. Коминтерна, д. 7 к2</span>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="logo">
+            <div class="logo__top"><span class="logo__main c-white">saldy</span>
+              <div class="logo__circle bg-pink"><span>s</span>
+              </div>
+            </div><span class="logo__bottom c-pink fw-bold fz9">Скидки каждый день</span>
+          </div>
+          <div class="d-flex flex-column mt10"><span>© 2018 ООО «Сэлди»</span><span>Официальный сайт www.saldy.ru</span></div>
+        </div>
+      </div>
     </div>
     <script src="assets/libs/jquery-3.3.1.min.js"></script>
     <script src="assets/libs/svg-injector.js"></script>
     <script src="assets/libs/select2/select2.min.js"></script>
     <script src="assets/libs/mCustomScrollbar/jquery.mCustomScrollbar.js"></script>
+    <script src="assets/libs/slick/slick.min.js"></script>
+    <script src="assets/libs/video.js/video.js"></script>
     <script src="assets/js/script.js"></script>
   </body>
 </html>

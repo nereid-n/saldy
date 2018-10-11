@@ -1,3 +1,64 @@
 mixin footer()
-	+b.footer
-		block
+  +b.footer
+    +e.top
+      +e.item
+        +e('span').title Покупателям
+        +e('a').link(href="#") Как  заказать
+        +e('a').link(href="#") Доставка
+        +e('a').link(href="#") Оплата
+        +e('a').link(href="#") Возврат товаров
+        +e('a').link(href="#") Пользовательское <br> соглашение
+      +e.item
+        +e('span').title Компания
+        +e('a').link(href="#") О нас
+        +e('a').link(href="#") Отзывы
+        +e('a').link(href="#") Новости
+        +e('a').link(href="#") Контакты
+      +e.item
+        +e('span').title ПРИНИМАЕМ ОПЛАТУ
+        +b.social
+          +e.item
+            img(src="assets/images/footer/viza.png")
+          +e.item
+            img(src="assets/images/footer/mast1.png")
+          +e.item
+            img(src="assets/images/footer/mast2.png")
+        +e('span').title.__title-second ПОДПИСКА НА НОВОСТИ
+        +e('form').search
+          .input-btn
+            input.input-width-btn(placeholder="Введите email")
+            +e('button').search-btn.btn.btn-with-input.bg-pink
+              i.fa.fa-angle-right
+      +e.item
+        +e('span').title МЫ В ОНЛАЙН-ЧАТАХ
+        +b.social
+          +e('a').item(href="#")
+            img(src="assets/images/footer/viber.png")
+          +e('a').item(href="#")
+            img(src="assets/images/footer/whatsapp.png")
+          +e('a').item(href="#")
+            img(src="assets/images/footer/telegram.png")
+        +e('span').title.__title-second МЫ В СОЦСЕТЯХ
+        +b.social
+          +e('a').item.__link.bg-vk(href="#")
+            i.fa.fa-vk
+          +e('a').item.__link.bg-fb(href="#")
+            i.fa.fa-facebook
+          +e('a').item.__link.bg-ok(href="#")
+            i.fa.fa-odnoklassniki
+      +e.item
+        +e('span').title КОНТАКТЫ
+        +e('span').text Тел.: 8 800 100-44-99
+        +e('span').text Моб.: +7-985-100-44-99
+        +e('span').text Адрес: г. Москва, <br>
+            | ул. Коминтерна, д. 7 к2
+    +e.bottom
+      +b.logo
+        +e.top
+          +e('span').main.c-white saldy
+          +e.circle.bg-pink
+            span s
+        +e('span').bottom.c-pink.fw-bold.fz9 Скидки каждый день
+      .d-flex.flex-column.mt10
+        span © 2018 ООО «Сэлди»
+        span Официальный сайт www.saldy.ru

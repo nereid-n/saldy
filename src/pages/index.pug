@@ -1,6 +1,22 @@
-extends ../components/layout-default/layout-default
+extends ../components/layout-default/layout-index
+include ../components/index/index-banner/index-banner
+include ../components/index/index-main/index-main
+include ../components/index/index-soon/index-soon
+include ../components/index/index-leaders/index-leaders
+include ../components/index/index-category/index-category
+include ../components/index/index-brands/index-brands
+include ../components/index/index-action/index-action
+include ../components/index/index-news-reviews/index-news-reviews
 
 block head
     - var pageTitle = 'Index Page';
 
 block content
+  +index-banner()
+  +index-main()
+  +index-soon()
+  +index-leaders()
+  +index-category()
+  +index-brands()
+  +index-action()
+  +index-news-reviews()

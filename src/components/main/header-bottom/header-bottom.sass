@@ -46,9 +46,11 @@
       margin-right: 15px
   &__reg
     position: relative
+    z-index: 100
     &:hover
-      .header-bottom__reg-dropdown
+      .header-bottom__reg-dropdown-wrap
         opacity: 1
+        visibility: visible
     &-dropdown
       position: relative
       display: flex
@@ -60,8 +62,6 @@
       border: 1px solid $border-light-gray
       border-radius: $border-radius
       background-color: #fff
-      transition: $transition
-      opacity: 0
       &:after,
       &:before
         position: absolute
@@ -80,6 +80,9 @@
         top: 100%
         left: 0
         width: 200px
+        transition: $transition
+        opacity: 0
+        visibility: hidden
       &-list
         margin: 0
         padding: 0

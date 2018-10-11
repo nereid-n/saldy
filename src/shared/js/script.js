@@ -35,4 +35,10 @@ $(document).ready(function() {
     });
   }
 
+  if ($('.menu__btn-catalog-js').length > 0) {
+    $('.menu__btn-catalog-js').on('click', function() {
+      $('.menu__catalog').slideToggle();
+    });
+  }
+
 });
