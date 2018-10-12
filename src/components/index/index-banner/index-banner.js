@@ -3,6 +3,7 @@ if (document.querySelector('.index-banner-section')) {
   document.querySelector('.index-banner-section').style.height = height + 'px';
   if (document.documentElement.clientWidth <= 992) {
     document.querySelector('.index-banner-section').style.marginTop = height + 'px';
+    document.querySelector('.index-banner-section').style.height = 'unset';
   }
   window.onresize = function() {
     if (document.documentElement.clientWidth <= 992) {

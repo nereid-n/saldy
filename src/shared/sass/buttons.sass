@@ -8,8 +8,9 @@ button
   display: flex
   align-items: center
   justify-content: center
-  padding: 10px 25px
+  padding: 7px 15px
   color: #ffffff !important
+  text-decoration: none
   font-weight: 700
   line-height: 1.2em !important
   text-transform: uppercase
@@ -18,8 +19,13 @@ button
   cursor: pointer
   &:hover
     border: 1px solid #ffffff
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2)
+    box-shadow: $shadow
   &-with-input
     padding: 10px 15px
     border-top-left-radius: 0
     border-bottom-left-radius: 0
+  &-count
+    width: 32px
+    font-size: 19px
+    background: none
+    border: none

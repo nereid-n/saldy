@@ -42,11 +42,27 @@ $(document).ready(function () {
   }
 });
 
+var btnCount = document.querySelectorAll('.js-btn-count');
+
+for (var i = 0; i < btnCount.length; i++) {
+  btnCount[i].onclick = function (e) {
+    var parent = e.target.closest('.input-count-wrap');
+    var input = parent.querySelector('.input-count');
+    var value = parseInt(input.value);
+    if (e.target.classList.contains('js-btn-count-minus')) {
+      input.value = value - 1;
+    } else if (e.target.classList.contains('js-btn-count-plus')) {
+      input.value = value + 1;
+    }
+  };
+}
+
 if (document.querySelector('.index-banner-section')) {
   var height = document.querySelector('.menu__catalog').offsetHeight;
   document.querySelector('.index-banner-section').style.height = height + 'px';
   if (document.documentElement.clientWidth <= 992) {
     document.querySelector('.index-banner-section').style.marginTop = height + 'px';
+    document.querySelector('.index-banner-section').style.height = 'unset';
   }
   window.onresize = function () {
     if (document.documentElement.clientWidth <= 992) {
@@ -63,6 +79,76 @@ if ($('.index-banner').length > 0) {
   $('.index-banner').slick({
     nextArrow: '<button type="button" class="index-banner__btn index-banner__btn-next"><i class="fa fa-angle-right"></i></button>',
     prevArrow: '<button type="button" class="index-banner__btn index-banner__btn-prev"><i class="fa fa-angle-left"></i></button>'
+  });
+}
+
+if ($('.main-slick-brand').length > 0) {
+  $('.main-slick-brand').slick({
+    variableWidth: true,
+    nextArrow: '<button type="button" class="main-slick__btn main-slick__btn-next"><i class="fa fa-angle-right"></i></button>',
+    prevArrow: '<button type="button" class="main-slick__btn main-slick__btn-prev"><i class="fa fa-angle-left"></i></button>'
+  });
+}
+
+if ($('.main-slick-js-5').length > 0) {
+  $('.main-slick-js-5').slick({
+    slidesToShow: 5,
+    slidesToScroll: 5,
+    nextArrow: '<button type="button" class="main-slick__btn main-slick__btn-next"><i class="fa fa-angle-right"></i></button>',
+    prevArrow: '<button type="button" class="main-slick__btn main-slick__btn-prev"><i class="fa fa-angle-left"></i></button>',
+    responsive: [{
+      breakpoint: 1100,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 4
+      }
+    }, {
+      breakpoint: 900,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3
+      }
+    }, {
+      breakpoint: 700,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    }, {
+      breakpoint: 450,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }]
+  });
+}
+
+if ($('.main-slick-js').length > 0) {
+  $('.main-slick-js').slick({
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    nextArrow: '<button type="button" class="main-slick__btn main-slick__btn-next"><i class="fa fa-angle-right"></i></button>',
+    prevArrow: '<button type="button" class="main-slick__btn main-slick__btn-prev"><i class="fa fa-angle-left"></i></button>',
+    responsive: [{
+      breakpoint: 1150,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3
+      }
+    }, {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    }, {
+      breakpoint: 575,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }]
   });
 }
 //# sourceMappingURL=script.js.map

@@ -1,0 +1,6 @@
+mixin categories(data)
+  +b.card-category(class=data.wrap)
+    +e.main.card
+      +e('img').img(src=data.img)
+    +e.title
+      a(href="#")= data.title

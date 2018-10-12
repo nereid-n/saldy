@@ -1,14 +1,14 @@
 mixin index-main()
-  +b.index-main
+  +b('section').index-main
     +e.item
       +e.block
         +e.block-text
           h3.mb10.mt0.fw-bold.fz30 Материалы <br> для наращивания
           span.fz18 EXTREME LOOK
           p.mt30 Ресницы для наращивания, клей, препараты и аксессуары.
-          button.btn.bg-pink.mt60 В каталог
+          a.btn.bg-pink.mt60(href="#") В каталог
         +e.block-img
-          img(src="assets/images/index/img1.png")
+          img(src="assets/images/index/img1.png" alt="")
     +e.item
       +e('video').video.video-js(controls preload="auto" data-setup='{"fluid": true}')
         source(src="assets/video/post_video.mp4")

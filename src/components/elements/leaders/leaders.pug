@@ -1,0 +1,33 @@
+mixin leaders(data)
+  +b.card-leader.card(class=data.wrap)
+    +e.top
+      +e('img').img(src=data.img)
+      +e.like
+        img.like.inject-me(src='assets/images/icons/favorite.svg' class=data.like)
+    +e.main.mb10
+      a.mt0.mb10.card-title(href="#")= data.title
+      +e('span').desc= data.desc
+    if data.option
+      +e.option
+        each option in data.options
+          span.fz12.fw-medium.c-gray= option.title
+          .radio-options
+            each radio, index in option.values
+              .radio-option-wrap
+                input(type="radio" id=`radio-${option.name}-${index}` name=option.name)
+                label(for=`radio-${option.name}-${index}`)= radio
+    .d-flex.mt-auto
+      .mr15
+        +e.price-old
+          span= data.priceOld
+        +e.price-new.mt15
+          span= data.priceNew
+      .d-flex.flex-column.align-items-center.mx-auto
+        .input-count-wrap
+          button.btn-count.js-btn-count.js-btn-count-minus -
+          input.input-count(type="number" value="1")
+          button.btn-count.js-btn-count.js-btn-count-plus +
+        div.mt15
+          button.btn(class=data.btnClass)
+            img.icon.icon-white.inject-me.mr10(src="assets/images/icons/shopping-cart.svg")
+            span.white-space-nowrap= data.btnText

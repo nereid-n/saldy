@@ -1,3 +1,28 @@
 mixin index-brands()
-	+b.index-brands
-		block
+  +b('section').index-brands
+    h2.title-section.title-section-slider ПОПУЛЯРНЫЕ БРЕНДЫ
+    +b.main-slick-brand
+      -
+        var data = [
+          {
+            img: "assets/images/index/brand1.png"
+          },
+          {
+            img: "assets/images/index/brand2.png"
+          },
+          {
+            img: "assets/images/index/brand3.png"
+          },
+          {
+            img: "assets/images/index/brand4.png"
+          },
+          {
+            img: "assets/images/index/brand5.png"
+          },
+          {
+            img: "assets/images/index/brand6.png"
+          }
+        ]
+      each item in data
+        +e.item
+          img(src=item.img)

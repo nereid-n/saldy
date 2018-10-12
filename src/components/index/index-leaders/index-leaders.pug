@@ -1,3 +1,138 @@
+include ../../elements/leaders/leaders
+
 mixin index-leaders()
-	+b.index-leaders
-		block
+  +b('section').index-leaders
+    h2.title-section.title-section-slider ЛИДЕРЫ ПРОДАЖ
+    +b.main-slick.main-slick-js
+      -
+        var data = [
+          {
+            wrap: "width100",
+            img: "assets/images/index/leaders1.jpg",
+            like: "",
+            title: "BARBARA",
+            desc: "Чёрные ресницы Elegant, изгиб D",
+            option: true,
+            priceOld: "715 руб.",
+            priceNew: "464 руб.",
+            btnClass: "bg-pink",
+            btnText: "В КОРЗИНУ",
+            options: [
+              {
+                title: "Толщина",
+                name: "width",
+                values: [
+                  '0.05',
+                  '0.07',
+                  '0.10',
+                  '0.12',
+                  '0.15',
+                  '0.20'
+                ]
+              },
+              {
+                title: "Длина",
+                name: "height",
+                values: [
+                  '6',
+                  '7',
+                  '8',
+                  '9',
+                  '10',
+                  '11',
+                  '12',
+                  '13',
+                  '14',
+                  '15'
+                ]
+              }
+            ]
+          },
+          {
+            wrap: "width100",
+            img: "assets/images/index/leaders2.jpg",
+            like: "like-active",
+            title: "BARBARA",
+            desc: "Ортопедическая подушка (голубая)",
+            option: false,
+            priceOld: "920 руб.",
+            priceNew: "596 руб.",
+            btnClass: "bg-pink",
+            btnText: "В КОРЗИНУ"
+          },
+          {
+            wrap: "width100",
+            img: "assets/images/index/leaders3.png",
+            like: "like-active",
+            title: "BARBARA",
+            desc: "Клей BABRARA Effect, 5 мл",
+            option: false,
+            priceOld: "715 руб.",
+            priceNew: "399 руб.",
+            btnClass: "bg-gold",
+            btnText: "В КОРЗИНе"
+          },
+          {
+            wrap: "width100",
+            img: "assets/images/index/leaders4.jpg",
+            like: "",
+            title: "CC BROW",
+            desc: "Хна для бровей (Dark Brown) в баночке (темно-коричневый)  ",
+            option: false,
+            priceOld: "630 руб.",
+            priceNew: "451 руб.",
+            btnClass: "bg-pink",
+            btnText: "В КОРЗИНУ"
+          },
+          {
+            wrap: "width100",
+            img: "assets/images/index/leaders1.jpg",
+            like: "like-active",
+            title: "BARBARA",
+            desc: "Чёрные ресницы Elegant, изгиб D",
+            option: false,
+            priceOld: "715 руб.",
+            priceNew: "464 руб.",
+            btnClass: "bg-pink",
+            btnText: "В КОРЗИНУ"
+          },
+          {
+            wrap: "width100",
+            img: "assets/images/index/leaders2.jpg",
+            like: "",
+            title: "BARBARA",
+            desc: "Ортопедическая подушка (голубая)",
+            option: false,
+            priceOld: "920 руб.",
+            priceNew: "596 руб.",
+            btnClass: "bg-pink",
+            btnText: "В КОРЗИНУ"
+          },
+          {
+            wrap: "width100",
+            img: "assets/images/index/leaders3.png",
+            like: "",
+            title: "BARBARA",
+            desc: "Клей BABRARA Effect, 5 мл",
+            option: false,
+            priceOld: "715 руб.",
+            priceNew: "399 руб.",
+            btnClass: "bg-gold",
+            btnText: "В КОРЗИНе"
+          },
+          {
+            wrap: "width100",
+            img: "assets/images/index/leaders4.jpg",
+            like: "like-active",
+            title: "CC BROW",
+            desc: "Хна для бровей (Dark Brown) в баночке (темно-коричневый)  ",
+            option: false,
+            priceOld: "630 руб.",
+            priceNew: "451 руб.",
+            btnClass: "bg-pink",
+            btnText: "В КОРЗИНУ"
+          }
+        ]
+      each item in data
+        +e.item
+          +leaders(item)
