@@ -7,12 +7,10 @@ mixin index-category()
       -
         var data = [
           {
-            wrap: "width100",
             img: "assets/images/index/category1.jpg",
             title: "Ресницы для наращивания"
           },
           {
-            wrap: "width100",
             img: "assets/images/index/category2.jpg",
             title: "Расходные материалы"
           },
@@ -22,41 +20,34 @@ mixin index-category()
             title: "Пинцеты для наращивания"
           },
           {
-            wrap: "width100",
             img: "assets/images/index/category4.jpg",
             title: "Хна для бровей"
           },
           {
-            wrap: "width100",
             img: "assets/images/index/category5.jpg",
             title: "Ламинирование ресниц"
           },
           {
-            wrap: "width100",
             img: "assets/images/index/category1.jpg",
             title: "Ресницы для наращивания"
           },
           {
-            wrap: "width100",
             img: "assets/images/index/category2.jpg",
             title: "Расходные материалы"
           },
           {
-            wrap: "width100",
             img: "assets/images/index/category3.jpg",
             title: "Пинцеты для наращивания"
           },
           {
-            wrap: "width100",
             img: "assets/images/index/category4.jpg",
             title: "Хна для бровей"
           },
           {
-            wrap: "width100",
             img: "assets/images/index/category5.jpg",
             title: "Ламинирование ресниц"
           }
         ]
       each item in data
         +e.item
-          +categories(item)
+          +categories("width100", item)

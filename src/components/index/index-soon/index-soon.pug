@@ -1,9 +1,80 @@
+include ../../elements/discount/discount
+
 mixin index-soon()
   +b('section').index-soon
-    //+b.main-slick
-    //  +e.item
-    //  +e.item
-    //  +e.item
-    //  +e.item
-    //  +e.item
-    //.card.card-4
+  h2.title-section.title-section-slider СКОРО ВЫКУП
+  +b.main-slick.main-slick-js
+    -
+      var data = [
+        {
+          img: "assets/images/index/discount1.png",
+          discount: "40",
+          title: "BARBARA",
+          desc: "Материалы для наращивания и ламинирования ресниц",
+          time: "2 дня",
+          collect: "59"
+        },
+        {
+          img: "assets/images/index/discount2.png",
+          discount: "32",
+          title: "BARBARA",
+          desc: "Материалы для наращивания и ламинирования ресниц",
+          time: "3 дня",
+          collect: "43",
+          bgClass: "bg-gold",
+          like: "like-active"
+        },
+        {
+          img: "assets/images/index/discount3.png",
+          discount: "56",
+          title: "BARBARA",
+          desc: "Материалы для оформления и окрашивания бровей",
+          time: "16:31:48",
+          collect: "91"
+        },
+        {
+          img: "assets/images/index/discount4.png",
+          discount: "33",
+          title: "BARBARA",
+          desc: "Материалы для оформления и окрашивания бровей",
+          time: "Завершено",
+          collect: "118"
+        },
+        {
+          img: "assets/images/index/discount1.png",
+          discount: "40",
+          title: "BARBARA",
+          desc: "Материалы для наращивания и ламинирования ресниц",
+          time: "2 дня",
+          collect: "59"
+        },
+        {
+          img: "assets/images/index/discount2.png",
+          discount: "32",
+          title: "BARBARA",
+          desc: "Материалы для наращивания и ламинирования ресниц",
+          time: "3 дня",
+          collect: "43",
+          bgClass: "bg-gold",
+          like: "like-active"
+        },
+        {
+          img: "assets/images/index/discount3.png",
+          discount: "56",
+          title: "BARBARA",
+          desc: "Материалы для оформления и окрашивания бровей",
+          time: "16:31:48",
+          collect: "91"
+        },
+        {
+          img: "assets/images/index/discount4.png",
+          discount: "33",
+          title: "BARBARA",
+          desc: "Материалы для оформления и окрашивания бровей",
+          time: "Завершено",
+          collect: "118"
+        }
+      ]
+    each item in data
+      +e.item
+        +discount("width100", item)

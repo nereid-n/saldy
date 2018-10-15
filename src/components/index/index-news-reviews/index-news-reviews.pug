@@ -1,3 +1,43 @@
+include ../../elements/news/news
+
 mixin index-news-reviews()
-	+b.index-news-reviews
-		block
+  +b('section').index-news-reviews
+    +b.index-news
+      h2.title-section Новости
+      .d-flex.flex-wrap.justify-content-center
+        -
+          var data = [
+            {
+              img: "assets/images/index/news1.png",
+              title: "Оптовые цены на всё!",
+              desc: "Мы открываем осенний сезон, горячими скидками на все группы товаров..."
+            },
+            {
+              img: "assets/images/index/news2.png",
+              title: "Снижение цены на ботокс",
+              desc: "Скидка на ботокс -30% только до конца сентября...",
+              more: true,
+              moreTitleTop: "Ботокс",
+              moreTitleBottom: "для ресниц",
+              oldPrice: "2490",
+              newPrice: "1992"
+            }
+          ]
+        each item in data
+          +news("card-2", item)
+    +b.index-reviews
+      h2.title-section Отзывы
+      .d-flex.flex-wrap.justify-content-center
+        - for (var i = 0; i < 4; i++)
+          +b.card-review.card.card-2
+            .d-flex.c-gray.fz12
+              span.fw-light ОТЗЫВЫ
+              .ml-auto.d-flex.align-items-center
+                img(src="assets/images/icons/clock.svg").icon-small.icon-gray.inject-me.mx5
+                | 11.09.2018
+            span.mt20.mb10.fw-bold Очень довольна!
+            +e('p').text.dotdotdot Огромное спасибо организаторам! Получила свою посылочку вчера, и безумно довольна....
+            .mt-auto.d-flex.align-items-center
+              .avatar.avatar-small.mr10
+                img(src="assets/images/index/avatar.png")
+              span.c-gray Maria Petrova

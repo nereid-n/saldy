@@ -1,0 +1,33 @@
+mixin news(wrap, data)
+  +b.card-news.card(class=wrap)
+    +e.top
+      if data.more
+        +e.more-img
+          img(src="assets/images/index/news2.png")
+        +e.more-text
+          +e.more-title
+            .pos-relative
+              span.fz24.fw-medium= data.moreTitleTop
+              br
+              span.fz18= data.moreTitleBottom
+          +e('span').old-price
+            span= data.oldPrice
+            span.fz12   руб
+          +e('span').new-price
+            span= data.newPrice
+            span.fz12   руб
+      else
+        img.bg-img(src=data.img)
+    +e.bottom
+      +e('a').title(href="#")= data.title
+      +e('p').desc.dotdotdot= data.desc
+      .mt-auto.d-flex.fz12.c-gray
+        .d-flex.align-items-center.mr15
+          img(src="assets/images/icons/favorite.svg").like.like-gray.inject-me
+          span.px5 45
+        .d-flex.align-items-center
+          img(src="assets/images/icons/comment.svg").icon-small.icon-gray.inject-me
+          span.px5 7
+        .d-flex.align-items-center.ml-auto
+          img(src="assets/images/icons/clock.svg").icon-small.icon-gray.inject-me
+          span.px5 10.09.2018

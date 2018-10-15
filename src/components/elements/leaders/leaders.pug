@@ -1,9 +1,9 @@
-mixin leaders(data)
-  +b.card-leader.card(class=data.wrap)
+mixin leaders(wrap, data)
+  +b.card-leader.card(class=wrap)
     +e.top
       +e('img').img(src=data.img)
       +e.like
-        img.like.inject-me(src='assets/images/icons/favorite.svg' class=data.like)
+        img.like.inject-me(src='assets/images/icons/favorite.svg' class= data.like || '')
     +e.main.mb10
       a.mt0.mb10.card-title(href="#")= data.title
       +e('span').desc= data.desc
@@ -28,6 +28,6 @@ mixin leaders(data)
           input.input-count(type="number" value="1")
           button.btn-count.js-btn-count.js-btn-count-plus +
         div.mt15
-          button.btn(class=data.btnClass)
+          button.btn(class=data.btnClass || 'bg-pink')
             img.icon.icon-white.inject-me.mr10(src="assets/images/icons/shopping-cart.svg")
-            span.white-space-nowrap= data.btnText
+            span.white-space-nowrap= data.btnText || "В КОРЗИНУ"

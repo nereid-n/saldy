@@ -7,16 +7,12 @@ mixin index-leaders()
       -
         var data = [
           {
-            wrap: "width100",
             img: "assets/images/index/leaders1.jpg",
-            like: "",
             title: "BARBARA",
             desc: "Чёрные ресницы Elegant, изгиб D",
             option: true,
             priceOld: "715 руб.",
             priceNew: "464 руб.",
-            btnClass: "bg-pink",
-            btnText: "В КОРЗИНУ",
             options: [
               {
                 title: "Толщина",
@@ -49,90 +45,63 @@ mixin index-leaders()
             ]
           },
           {
-            wrap: "width100",
             img: "assets/images/index/leaders2.jpg",
             like: "like-active",
             title: "BARBARA",
             desc: "Ортопедическая подушка (голубая)",
-            option: false,
             priceOld: "920 руб.",
-            priceNew: "596 руб.",
-            btnClass: "bg-pink",
-            btnText: "В КОРЗИНУ"
+            priceNew: "596 руб."
           },
           {
-            wrap: "width100",
             img: "assets/images/index/leaders3.png",
             like: "like-active",
             title: "BARBARA",
             desc: "Клей BABRARA Effect, 5 мл",
-            option: false,
             priceOld: "715 руб.",
             priceNew: "399 руб.",
             btnClass: "bg-gold",
             btnText: "В КОРЗИНе"
           },
           {
-            wrap: "width100",
             img: "assets/images/index/leaders4.jpg",
-            like: "",
             title: "CC BROW",
             desc: "Хна для бровей (Dark Brown) в баночке (темно-коричневый)  ",
-            option: false,
             priceOld: "630 руб.",
-            priceNew: "451 руб.",
-            btnClass: "bg-pink",
-            btnText: "В КОРЗИНУ"
+            priceNew: "451 руб."
           },
           {
-            wrap: "width100",
             img: "assets/images/index/leaders1.jpg",
             like: "like-active",
             title: "BARBARA",
             desc: "Чёрные ресницы Elegant, изгиб D",
-            option: false,
             priceOld: "715 руб.",
-            priceNew: "464 руб.",
-            btnClass: "bg-pink",
-            btnText: "В КОРЗИНУ"
+            priceNew: "464 руб."
           },
           {
-            wrap: "width100",
             img: "assets/images/index/leaders2.jpg",
-            like: "",
             title: "BARBARA",
             desc: "Ортопедическая подушка (голубая)",
-            option: false,
             priceOld: "920 руб.",
-            priceNew: "596 руб.",
-            btnClass: "bg-pink",
-            btnText: "В КОРЗИНУ"
+            priceNew: "596 руб."
           },
           {
-            wrap: "width100",
             img: "assets/images/index/leaders3.png",
-            like: "",
             title: "BARBARA",
             desc: "Клей BABRARA Effect, 5 мл",
-            option: false,
             priceOld: "715 руб.",
             priceNew: "399 руб.",
             btnClass: "bg-gold",
             btnText: "В КОРЗИНе"
           },
           {
-            wrap: "width100",
             img: "assets/images/index/leaders4.jpg",
             like: "like-active",
             title: "CC BROW",
             desc: "Хна для бровей (Dark Brown) в баночке (темно-коричневый)  ",
-            option: false,
             priceOld: "630 руб.",
-            priceNew: "451 руб.",
-            btnClass: "bg-pink",
-            btnText: "В КОРЗИНУ"
+            priceNew: "451 руб."
           }
         ]
       each item in data
         +e.item
-          +leaders(item)
+          +leaders("width100", item)

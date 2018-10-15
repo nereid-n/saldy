@@ -41,4 +41,9 @@ $(document).ready(function() {
     });
   }
 
+
+  if ($('.dotdotdot').length > 0) {
+    $('.dotdotdot').dotdotdot();
+  }
+
 });

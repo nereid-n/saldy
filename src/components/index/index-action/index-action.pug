@@ -1,3 +1,14 @@
 mixin index-action()
-	+b.index-action
-		block
+  +b('section').index-action
+    +e.wrap
+      +e.item.card
+        +e.img
+          img.bg-img(src="assets/images/index/action1.png")
+          +e.label.label.bg-pink Акция
+        +e.text
+          span.fz18.fw-bold.c-pink Бесплатная доставка
+          span.fz18.mt5.fw-bold От 2000 рублей
+          span.fz18.mt5.fw-medium.c-gray По всей России
+          a(href="#").btn.bg-pink.mt20.fz12 Подробнее
+      +e.item.card
+        img.bg-img(src="assets/images/index/action2.png")

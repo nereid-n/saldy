@@ -40,6 +40,10 @@ $(document).ready(function () {
       $('.menu__catalog').slideToggle();
     });
   }
+
+  if ($('.dotdotdot').length > 0) {
+    $('.dotdotdot').dotdotdot();
+  }
 });
 
 var btnCount = document.querySelectorAll('.js-btn-count');

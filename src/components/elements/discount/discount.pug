@@ -1,0 +1,22 @@
+mixin discount(wrap, data)
+  - var discount = 'скидка ' + data.discount + '%'
+  - var collect = data.collect + "%"
+  +b.card-discount.card(class=wrap)
+    +e.top
+      img(src=data.img).bg-img
+      +e.like
+        img.inject-me.like(src="assets/images/icons/favorite.svg" class=data.like || '')
+      .title-on-img.text-center
+        span.text-uppercase.fz18= discount
+    +e.bottom
+      a.my0.card-title(href="#")= data.title
+      p.mt10.mb30= data.desc
+      .d-flex.align-items-center
+        span Выкуп:
+        .label.ml10(class= data.bgClass || "bg-pink")= data.time
+      .d-flex.align-items-center.mt10
+        span Собрано:
+        .progress-wrap.ml10
+          .progress-bar
+            .progress(class= data.bgClass || "bg-pink" style=`width: ${collect}`)
+          span.progress-percent= collect

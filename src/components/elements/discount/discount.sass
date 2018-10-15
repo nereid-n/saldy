@@ -1,0 +1,36 @@
+@import "../../../shared/sass/vars"
+
+.card-discount
+  &__top
+    position: relative
+    height: 210px
+    display: flex
+  &__like
+    position: absolute
+    top: 15px
+    right: 15px
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 34px
+    height: 34px
+    background-color: #fff
+    border-radius: 50%
+  &__bottom
+    padding: 15px
+
+.progress
+  height: 100%
+  &-wrap
+    display: flex
+    align-items: center
+    flex-grow: 1
+  &-bar
+    flex-grow: 1
+    height: 14px
+    margin-right: 10px
+    background-color: $border-input
+    border-radius: 7px
+    overflow: hidden
+  &-percent
+    color: $pink

@@ -1,2 +1,26 @@
+@import "../../../shared/sass/vars"
+
 .index-news-reviews
-	display: block
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  padding: 0 0 20px
+  @media (max-width: 1100px)
+    justify-content: center
+
+.index-news,
+.index-reviews
+  width: calc(50% - 15px)
+  @media (max-width: 1100px)
+    width: 600px
+
+.card-review
+  display: flex
+  flex-direction: column
+  min-height: 180px
+  padding: 15px 20px
+  &__text
+    margin: 0
+    font-size: 12px
+    color: $gray
+    max-height: 42px

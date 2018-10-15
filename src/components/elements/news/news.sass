@@ -1,0 +1,72 @@
+@import "../../../shared/sass/vars"
+
+.card-news
+  min-height: 390px
+  &__top
+    position: relative
+    display: flex
+    height: 270px
+  &__title
+    text-decoration: none
+    font-weight: 700
+    color: inherit
+    &:hover
+      color: $pink
+  &__bottom
+    display: flex
+    flex-direction: column
+    height: 120px
+    padding: 15px 20px
+  &__desc
+    color: $gray
+    font-size: 12px
+    height: 28px
+  &__more
+    &-img
+      position: relative
+      z-index: 1
+      width: 50%
+      height: 100%
+      display: flex
+      justify-content: flex-end
+      align-items: flex-end
+      padding-bottom: 15px
+    &-text
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      width: 50%
+    &-title
+      position: relative
+      margin-top: 30px
+      padding: 5px 5px 5px 0
+      width: 100%
+      text-transform: uppercase
+      color: #ffffff
+      &:before
+        position: absolute
+        content: ""
+        right: 0
+        top: 0
+        height: 100%
+        width: 200%
+        background-color: $pink
+  &__old-price
+    position: relative
+    margin: 15px 0 3px 5px
+    font-size: 24px
+    text-transform: uppercase
+    &:after
+      position: absolute
+      content: ""
+      left: 0
+      bottom: 13px
+      height: 1px
+      width: 100%
+      background-color: $pink
+  &__new-price
+    margin-left: 5px
+    font-size: 24px
+    text-transform: uppercase
+    font-weight: 700
+    color: $pink

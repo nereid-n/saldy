@@ -1,5 +1,5 @@
-mixin categories(data)
-  +b.card-category(class=data.wrap)
+mixin categories(wrap, data)
+  +b.card-category(class=wrap)
     +e.main.card
       +e('img').img(src=data.img)
     +e.title

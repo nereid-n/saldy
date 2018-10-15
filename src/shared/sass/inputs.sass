@@ -52,6 +52,7 @@ input[type='number']
     input
       position: absolute
       opacity: 0
+      visibility: hidden
       &:checked + label
         color: #fff
         border: 1px solid #ffffff
@@ -67,3 +68,9 @@ input[type='number']
       border: 1px solid transparent
       border-radius: $border-radius
       transition: $transition
+      cursor: pointer
+      &:hover
+        color: #fff
+        border: 1px solid #ffffff
+        background-color: $pink
+        box-shadow: $shadow 
