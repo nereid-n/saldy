@@ -1,4 +1,4 @@
-mixin leaders(wrap, data)
+mixin leaders(wrap, data, number)
   +b.card-leader.card(class=wrap)
     +e.top
       +e('img').img(src=data.img)
@@ -14,8 +14,8 @@ mixin leaders(wrap, data)
           .radio-options
             each radio, index in option.values
               .radio-option-wrap
-                input(type="radio" id=`radio-${option.name}-${index}` name=option.name)
-                label(for=`radio-${option.name}-${index}`)= radio
+                input(type="radio" id=`radio-${option.name}-${number}-${index}` name=`${option.name}-${number}`)
+                label(for=`radio-${option.name}-${number}-${index}`)= radio
     .d-flex.mt-auto
       .mr15
         +e.price-old

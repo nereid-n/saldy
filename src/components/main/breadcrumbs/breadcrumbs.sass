@@ -1,2 +1,16 @@
+@import "../../../shared/sass/vars"
+
 .breadcrumbs
-	display: block
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  padding: 15px 20px
+  color: $gray
+  &__item
+    margin: 5px 0
+    color: inherit
+    text-decoration: none
+    &:hover
+      color: $pink
+    &:last-child
+      pointer-events: none

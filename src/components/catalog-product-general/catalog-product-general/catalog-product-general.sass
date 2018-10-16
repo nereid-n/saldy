@@ -1,0 +1,32 @@
+@import "../../../shared/sass/vars"
+
+.catalog-right
+  width: calc(100% - 300px)
+  @media (max-width: 767px)
+    width: 100%
+
+.catalog-menu
+  min-width: 300px
+  margin: 0
+  padding: 20px
+  list-style: none
+  &__item
+    padding: 5px 0
+    cursor: pointer
+  &__submenu
+    display: none
+    list-style: none
+    padding-left: 20px
+    .catalog-menu__item
+      display: inline-block
+      text-decoration: none
+      color: inherit
+      &:first-child
+        padding-top: 10px
+      &:last-child
+        padding-bottom: 0
+  &__title
+    display: inline-block
+    margin-right: 15px
+    &:hover
+      color: $pink

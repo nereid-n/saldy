@@ -9,7 +9,6 @@ select
   color: inherit
   background-color: transparent
   &:focus
-    outline: none
     border: 1px solid transparentize($pink, 0.6)
 
 .input-width-btn
@@ -74,3 +73,95 @@ input[type='number']
         border: 1px solid #ffffff
         background-color: $pink
         box-shadow: $shadow 
+
+.filter-select
+  .select2-container--default .select2-selection--single .select2-selection__arrow b
+    top: calc(50% - 4px)
+    width: 8px
+    height: 8px
+    border-color: $gray $gray transparent transparent
+    border-style: solid
+    border-width: 2px 2px 0 0
+    transform: rotate(135deg)
+  .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b
+    top: 50%
+    transform: rotate(-45deg)
+  .select2-results
+    max-height: 200px
+    overflow: hidden
+  .select2-search--dropdown
+    display: none
+  .select2-container--default .select2-selection--single
+    border: 1px solid $border-input
+    border-radius: $border-radius
+  .select2-container--default.select2-container--open .select2-selection--single
+    border-bottom-right-radius: 0
+    border-bottom-left-radius: 0
+    border-bottom: none
+  .select2-dropdown
+    border: 1px solid $border-input
+    border-top: none
+    border-top-right-radius: 0
+    border-top-left-radius: 0
+  .select2-container--default .select2-results__option--highlighted[aria-selected]
+    background-color: inherit
+    color: inherit
+  .select2-container--default .select2-results__option[aria-selected=true]
+    background-color: inherit
+  .select2-results__option
+    padding: 6px 8px
+    &:hover
+      color: $pink !important
+
+.checkbox
+  position: relative
+  width: 20px
+  height: 20px
+  margin-right: 5px
+  border: 1px solid $border-input
+  border-radius: $border-radius
+  transition: $transition
+  &:after
+    position: absolute
+    top: 6px
+    left: 5px
+    content: ""
+    width: 10px
+    height: 3px
+    border-bottom: 1px solid #ffffff
+    border-left: 1px solid #ffffff
+    transform: rotate(-45deg)
+  &-wrap
+    position: relative
+    input
+      position: absolute
+      opacity: 0
+      visibility: hidden
+      &:checked + label .checkbox
+        background-color: $pink
+    label
+      display: flex
+      align-items: center
+      cursor: pointer
+
+.round-radio
+  position: relative
+  input
+    position: absolute
+    opacity: 0
+    &:checked + label
+      background-color: $pink
+      box-shadow: $shadow
+      border: 1px solid #ffffff
+  label
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 35px
+    height: 35px
+    font-size: 12px
+    color: #ffffff
+    background-color: $border-input
+    border-radius: 50%
+    transition: $transition
+    cursor: pointer

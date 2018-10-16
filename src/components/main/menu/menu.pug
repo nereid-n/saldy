@@ -1,5 +1,11 @@
 mixin menu()
   +b('nav').menu
+    +e.list
+      +e('a').item.__active(href="#") Лэшмейкер
+      +e('a').item(href="#") Ногтевой сервис
+      +e('a').item(href="#") Бровист
+      +e('a').item(href="#") Шугаринг
+      +e('a').item(href="#") SHOP
     +e.catalog-wrap
       +e('button').btn-catalog.__btn-catalog-js
         i.fa.fa-bars
@@ -10,52 +16,48 @@ mixin menu()
         each val in ['Бренды', 'Наращивание ресниц', 'Оборудование', 'Оформление бровей', 'Косметика', 'Аксессуары', 'Ламинирование и биозавивка', 'Шугаринг', 'Фирменная одежда']
           +e('li').catalog-item-wrap
             +e('span').catalog-item= val
-            +e.right-menu
-              +e.right-menu-block
-                span.fw-bold Ресницы для наращивания
-                +e('a').right-menu-link(href="#") Чёрные
-                +e('a').right-menu-link(href="#") Коричневые
-                +e('a').right-menu-link(href="#") Цветные
-              +e.right-menu-block
-                span.fw-bold Ресницы для наращивания
-                +e('a').right-menu-link(href="#") Чёрные
-                +e('a').right-menu-link(href="#") Коричневые
-                +e('a').right-menu-link(href="#") Цветные
-              +e.right-menu-block
-                span.fw-bold Ресницы для наращивания
-                +e('a').right-menu-link(href="#") Чёрные
-                +e('a').right-menu-link(href="#") Коричневые
-                +e('a').right-menu-link(href="#") Цветные
-              +e.right-menu-block
-                span.fw-bold Препараты
-                +e('a').right-menu-link(href="#") Активаторы
-                +e('a').right-menu-link(href="#") Клей
-                +e('a').right-menu-link(href="#") Обезжириватели
-                +e('a').right-menu-link(href="#") Праймеры
-                +e('a').right-menu-link(href="#") Ремуверы
-              +e.right-menu-block
-                span.fw-bold Препараты
-                +e('a').right-menu-link(href="#") Активаторы
-                +e('a').right-menu-link(href="#") Клей
-                +e('a').right-menu-link(href="#") Обезжириватели
-              +e.right-menu-block
-                span.fw-bold Препараты
-                +e('a').right-menu-link(href="#") Активаторы
-                +e('a').right-menu-link(href="#") Клей
-                +e('a').right-menu-link(href="#") Обезжириватели
-                +e('a').right-menu-link(href="#") Праймеры
-                +e('a').right-menu-link(href="#") Ремуверы
-              +e.right-menu-block
-                span.fw-bold Хранение
-              +e.right-menu-block
-                span.fw-bold Хранение
-              +e.right-menu-block
-                span.fw-bold Фирменные товары
-              +e.right-menu-block
-                span.fw-bold Фирменные товары
-    +e.list
-      +e('a').item.__active(href="#") Лэшмейкер
-      +e('a').item(href="#") Ногтевой сервис
-      +e('a').item(href="#") Бровист
-      +e('a').item(href="#") Шугаринг
-      +e('a').item(href="#") SHOP
+            +e.right-menu-wrap
+              +e.right-menu
+                +e.right-menu-block
+                  span.fw-bold Ресницы для наращивания
+                  +e('a').right-menu-link(href="#") Чёрные
+                  +e('a').right-menu-link(href="#") Коричневые
+                  +e('a').right-menu-link(href="#") Цветные
+                +e.right-menu-block
+                  span.fw-bold Ресницы для наращивания
+                  +e('a').right-menu-link(href="#") Чёрные
+                  +e('a').right-menu-link(href="#") Коричневые
+                  +e('a').right-menu-link(href="#") Цветные
+                +e.right-menu-block
+                  span.fw-bold Ресницы для наращивания
+                  +e('a').right-menu-link(href="#") Чёрные
+                  +e('a').right-menu-link(href="#") Коричневые
+                  +e('a').right-menu-link(href="#") Цветные
+                +e.right-menu-block
+                  span.fw-bold Препараты
+                  +e('a').right-menu-link(href="#") Активаторы
+                  +e('a').right-menu-link(href="#") Клей
+                  +e('a').right-menu-link(href="#") Обезжириватели
+                  +e('a').right-menu-link(href="#") Праймеры
+                  +e('a').right-menu-link(href="#") Ремуверы
+                +e.right-menu-block
+                  span.fw-bold Препараты
+                  +e('a').right-menu-link(href="#") Активаторы
+                  +e('a').right-menu-link(href="#") Клей
+                  +e('a').right-menu-link(href="#") Обезжириватели
+                +e.right-menu-block
+                  span.fw-bold Препараты
+                  +e('a').right-menu-link(href="#") Активаторы
+                  +e('a').right-menu-link(href="#") Клей
+                  +e('a').right-menu-link(href="#") Обезжириватели
+                  +e('a').right-menu-link(href="#") Праймеры
+                  +e('a').right-menu-link(href="#") Ремуверы
+                +e.right-menu-block
+                  span.fw-bold Хранение
+                +e.right-menu-block
+                  span.fw-bold Хранение
+                +e.right-menu-block
+                  span.fw-bold Фирменные товары
+                +e.right-menu-block
+                  span.fw-bold Фирменные товары
+

@@ -1,0 +1,314 @@
+include ../../elements/leaders/leaders
+
+mixin catalog-product()
+  +b('section').catalog-product
+    +b.section-top
+      h2.title-section РЕСНИЦЫ ДЛЯ НАРАЩИВАНИЯ
+      +e.count 1986 товаров
+    +b.filter
+      +e('span').item.fw-bold Фильтр
+      +e.item.wrap-select.filter-select
+        select.select
+          option Бренд
+          option Изгиб
+          option Цвет
+      +e.item.wrap-select.filter-select
+        select.select
+          option Изгиб
+          option Цвет
+          option Бренд
+      +e.item.wrap-select.filter-select
+        select.select
+          option Цвет
+          option Бренд
+          option Изгиб
+      +e.item.checkbox-wrap
+        input(type="checkbox" id="check1")
+        label(for="check1")
+          .checkbox
+          | Микс
+      +e.item.checkbox-wrap
+        input(type="checkbox" id="check2")
+        label(for="check2")
+          .checkbox
+          | Отдельные длины
+      .ml-auto.d-flex.flex-wrap.align-items-center
+        +e('span').item.fw-bold Сортировка
+        +e.item.wrap-select.filter-select
+          select.select
+            option Цена по возрастанию
+            option Цена по убыванию
+            option По размеру скидки
+            option Собрано больше
+            option Собрано меньше
+            option Дата стопа ближе
+            option Дата стопа дальше
+    -
+      var data = [
+        {
+          img: "assets/images/index/leaders1.jpg",
+          title: "BARBARA",
+          desc: "Чёрные ресницы Elegant, изгиб D",
+          option: true,
+          priceOld: "715 руб.",
+          priceNew: "464 руб.",
+          options: [
+            {
+              title: "Толщина",
+              name: "width",
+              values: [
+                '0.05',
+                '0.07',
+                '0.10',
+                '0.12',
+                '0.15',
+                '0.20'
+              ]
+            },
+            {
+              title: "Длина",
+              name: "height",
+              values: [
+                '6',
+                '7',
+                '8',
+                '9',
+                '10',
+                '11',
+                '12',
+                '13',
+                '14',
+                '15'
+              ]
+            }
+          ]
+        },
+        {
+          img: "assets/images/index/leaders2.jpg",
+          like: "like-active",
+          title: "BARBARA",
+          desc: "Ортопедическая подушка (голубая)",
+          priceOld: "920 руб.",
+          priceNew: "596 руб."
+        },
+        {
+          img: "assets/images/index/leaders3.png",
+          like: "like-active",
+          title: "BARBARA",
+          desc: "Клей BABRARA Effect, 5 мл",
+          priceOld: "715 руб.",
+          priceNew: "399 руб.",
+          btnClass: "bg-gold",
+          btnText: "В КОРЗИНе"
+        },
+        {
+          img: "assets/images/index/leaders4.jpg",
+          title: "CC BROW",
+          desc: "Хна для бровей (Dark Brown) в баночке (темно-коричневый)  ",
+          priceOld: "630 руб.",
+          priceNew: "451 руб."
+        },
+        {
+          img: "assets/images/index/leaders2.jpg",
+          like: "like-active",
+          title: "BARBARA",
+          desc: "Ортопедическая подушка (голубая)",
+          priceOld: "920 руб.",
+          priceNew: "596 руб."
+        },
+        {
+          img: "assets/images/index/leaders3.png",
+          like: "like-active",
+          title: "BARBARA",
+          desc: "Клей BABRARA Effect, 5 мл",
+          priceOld: "715 руб.",
+          priceNew: "399 руб.",
+          btnClass: "bg-gold",
+          btnText: "В КОРЗИНе"
+        },
+        {
+          img: "assets/images/index/leaders4.jpg",
+          title: "CC BROW",
+          desc: "Хна для бровей (Dark Brown) в баночке (темно-коричневый)  ",
+          priceOld: "630 руб.",
+          priceNew: "451 руб."
+        },
+        {
+          img: "assets/images/index/leaders1.jpg",
+          title: "BARBARA",
+          desc: "Чёрные ресницы Elegant, изгиб D",
+          option: true,
+          priceOld: "715 руб.",
+          priceNew: "464 руб.",
+          options: [
+            {
+              title: "Толщина",
+              name: "width",
+              values: [
+                '0.05',
+                '0.07',
+                '0.10',
+                '0.12',
+                '0.15',
+                '0.20'
+              ]
+            },
+            {
+              title: "Длина",
+              name: "height",
+              values: [
+                '6',
+                '7',
+                '8',
+                '9',
+                '10',
+                '11',
+                '12',
+                '13',
+                '14',
+                '15'
+              ]
+            }
+          ]
+        },
+        {
+          img: "assets/images/index/leaders1.jpg",
+          title: "BARBARA",
+          desc: "Чёрные ресницы Elegant, изгиб D",
+          option: true,
+          priceOld: "715 руб.",
+          priceNew: "464 руб.",
+          options: [
+            {
+              title: "Толщина",
+              name: "width",
+              values: [
+              '0.05',
+              '0.07',
+              '0.10',
+              '0.12',
+              '0.15',
+              '0.20'
+              ]
+            },
+            {
+              title: "Длина",
+              name: "height",
+              values: [
+              '6',
+              '7',
+              '8',
+              '9',
+              '10',
+              '11',
+              '12',
+              '13',
+              '14',
+              '15'
+              ]
+            }
+          ]
+        },
+        {
+          img: "assets/images/index/leaders1.jpg",
+          title: "BARBARA",
+          desc: "Чёрные ресницы Elegant, изгиб D",
+          option: true,
+          priceOld: "715 руб.",
+          priceNew: "464 руб.",
+          options: [
+            {
+              title: "Толщина",
+              name: "width",
+              values: [
+                '0.05',
+                '0.07',
+                '0.10',
+                '0.12',
+                '0.15',
+                '0.20'
+              ]
+            },
+            {
+              title: "Длина",
+              name: "height",
+              values: [
+                '6',
+                '7',
+                '8',
+                '9',
+                '10',
+                '11',
+                '12',
+                '13',
+                '14',
+                '15'
+              ]
+            }
+          ]
+        },
+        {
+          img: "assets/images/index/leaders1.jpg",
+          title: "BARBARA",
+          desc: "Чёрные ресницы Elegant, изгиб D",
+          option: true,
+          priceOld: "715 руб.",
+          priceNew: "464 руб.",
+          options: [
+            {
+              title: "Толщина",
+              name: "width",
+              values: [
+                '0.05',
+                '0.07',
+                '0.10',
+                '0.12',
+                '0.15',
+                '0.20'
+              ]
+            },
+            {
+              title: "Длина",
+              name: "height",
+              values: [
+                '6',
+                '7',
+                '8',
+                '9',
+                '10',
+                '11',
+                '12',
+                '13',
+                '14',
+                '15'
+              ]
+            }
+          ]
+        }
+      ]
+    .grid
+      each item, index in data
+        +leaders("card-normal grid-item", item, index)
+    .products-bottom
+      +b('nav').catalog-pages
+        +e('a').item.mr-auto(href="#")
+          i.fa.fa-angle-left
+        - for (var i = 0; i < 9; i++)
+          - if (i === 4)
+            +e('a').item.__item-active(href="#")= i + 1
+          - else
+            +e('a').item(href="#")= i + 1
+        +e('a').item.ml-auto(href="#")
+          i.fa.fa-angle-right
+      +b.products-count
+        +e('span').item Товаров на странице
+        .d-flex.flex-wrap
+          +e.item.round-radio
+            input(type="radio" id="count1" name="radio-count")
+            label(for="count1")  24
+          +e.item.round-radio
+            input(type="radio" id="count2" name="radio-count")
+            label(for="count2")  48
+          +e.item.round-radio
+            input(type="radio" id="count3" name="radio-count")
+            label(for="count3")  96

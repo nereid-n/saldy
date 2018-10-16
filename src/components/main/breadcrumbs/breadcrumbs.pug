@@ -1,3 +1,6 @@
-mixin breadcrumbs()
-	+b.breadcrumbs
-		block
+mixin breadcrumbs(data)
+  +b('nav').breadcrumbs
+    +e('a').item(href="/") Главная
+    each item in data
+      span.px5 /
+      +e('a').item(href="#")= item

@@ -102,6 +102,6 @@ mixin index-leaders()
             priceNew: "451 руб."
           }
         ]
-      each item in data
+      each item, index in data
         +e.item
-          +leaders("width100", item)
+          +leaders("width100", item, index)
