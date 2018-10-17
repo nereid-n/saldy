@@ -1,0 +1,11 @@
+extends ../components/layout-default/layout-default
+include ../components/main/breadcrumbs/breadcrumbs
+include ../components/authorization/authorization/authorization
+
+block head
+  - var pageTitle = 'Вход';
+
+block content
+  - var breadcrumbs = ['Авторизация']
+  +breadcrumbs(breadcrumbs)
+  +authorization()

@@ -50,7 +50,6 @@ $(document).ready(function() {
     });
   }
 
-
   if ($('.dotdotdot').length > 0) {
     $('.dotdotdot').dotdotdot();
   }
@@ -60,6 +59,5 @@ $(document).ready(function() {
     gutter: 30,
     fitWidth: true
   });
-
 
 });

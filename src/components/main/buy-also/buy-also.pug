@@ -1,0 +1,107 @@
+include ../../elements/leaders/leaders
+
+mixin buy-also()
+  +b('section').buy-also
+    h2.title-section.title-section-slider С ЭТИМ ТОВАРОМ ПОКУПАЮТ
+    +b.main-slick.main-slick-js
+      -
+        var data = [
+        {
+        img: "assets/images/index/leaders1.jpg",
+        title: "BARBARA",
+        desc: "Чёрные ресницы Elegant, изгиб D",
+        option: true,
+        priceOld: "715 руб.",
+        priceNew: "464 руб.",
+        options: [
+        {
+        title: "Толщина",
+        name: "width",
+        values: [
+        '0.05',
+        '0.07',
+        '0.10',
+        '0.12',
+        '0.15',
+        '0.20'
+        ]
+        },
+        {
+        title: "Длина",
+        name: "height",
+        values: [
+        '6',
+        '7',
+        '8',
+        '9',
+        '10',
+        '11',
+        '12',
+        '13',
+        '14',
+        '15'
+        ]
+        }
+        ]
+        },
+        {
+        img: "assets/images/index/leaders2.jpg",
+        like: "like-active",
+        title: "BARBARA",
+        desc: "Ортопедическая подушка (голубая)",
+        priceOld: "920 руб.",
+        priceNew: "596 руб."
+        },
+        {
+        img: "assets/images/index/leaders3.png",
+        like: "like-active",
+        title: "BARBARA",
+        desc: "Клей BABRARA Effect, 5 мл",
+        priceOld: "715 руб.",
+        priceNew: "399 руб.",
+        btnClass: "bg-gold",
+        btnText: "В КОРЗИНе"
+        },
+        {
+        img: "assets/images/index/leaders4.jpg",
+        title: "CC BROW",
+        desc: "Хна для бровей (Dark Brown) в баночке (темно-коричневый)  ",
+        priceOld: "630 руб.",
+        priceNew: "451 руб."
+        },
+        {
+        img: "assets/images/index/leaders1.jpg",
+        like: "like-active",
+        title: "BARBARA",
+        desc: "Чёрные ресницы Elegant, изгиб D",
+        priceOld: "715 руб.",
+        priceNew: "464 руб."
+        },
+        {
+        img: "assets/images/index/leaders2.jpg",
+        title: "BARBARA",
+        desc: "Ортопедическая подушка (голубая)",
+        priceOld: "920 руб.",
+        priceNew: "596 руб."
+        },
+        {
+        img: "assets/images/index/leaders3.png",
+        title: "BARBARA",
+        desc: "Клей BABRARA Effect, 5 мл",
+        priceOld: "715 руб.",
+        priceNew: "399 руб.",
+        btnClass: "bg-gold",
+        btnText: "В КОРЗИНе"
+        },
+        {
+        img: "assets/images/index/leaders4.jpg",
+        like: "like-active",
+        title: "CC BROW",
+        desc: "Хна для бровей (Dark Brown) в баночке (темно-коричневый)  ",
+        priceOld: "630 руб.",
+        priceNew: "451 руб."
+        }
+        ]
+      each item, index in data
+        +e.item
+          +leaders("width100", item, index)

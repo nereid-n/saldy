@@ -61,6 +61,10 @@ $(document).ready(function () {
   });
 });
 
+if (document.querySelector('.tab-item-js')) {
+  tabs();
+}
+
 if ($('.catalog-menu__item-js').length > 0) {
   $('.catalog-menu__item-js').on('click', function () {
     $('.catalog-menu__submenu').not($('.catalog-menu__submenu', this)).slideUp();

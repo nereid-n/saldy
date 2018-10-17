@@ -43,7 +43,9 @@ gulp.task('js', function () {
             presets: ['env']
         }))
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('./dist/assets/js'))
+        .pipe(gulp.dest('./dist/assets/js'));
+    gulp.src(['./src/shared/classes/**/*.js'])
+        .pipe(gulp.dest('./dist/assets/js/classes'))
 });
 gulp.task('libs', function () {
     return gulp.src('./src/libs/**/*')
@@ -80,6 +82,7 @@ gulp.task('watch', ['pug', 'css', 'js'], function () {
     gulp.watch(['./src/components/**/*.sass', './src/shared/sass/**/*.sass'], ['css']);
     gulp.watch(['./src/components/**/*.js', './src/shared/js/**/*.js'], ['js']);
 
+    gulp.watch('./dist/assets/classes/*.js').on('change', browserSync.reload);
     gulp.watch('./dist/assets/js/*.js').on('change', browserSync.reload);
     gulp.watch('./dist/*.html').on('change', browserSync.reload);
 

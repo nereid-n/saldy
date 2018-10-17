@@ -55,7 +55,7 @@
   border-radius: 50%
 
 .social
-  display: flex
+  display: inline-flex
   flex-wrap: wrap
   min-height: 40px
   margin: -5px -9px
@@ -160,6 +160,16 @@ a.card-title
     #path3876,
     #path4720
       fill: $pink !important
+  &-text
+    color: $gray
+    font-size: 12px
+    text-transform: uppercase
+    background-color: transparent
+    border: none
+    text-decoration: none
+    cursor: pointer
+    &:hover
+      color: $pink
 
 .slick-list,
 .slick-track
@@ -202,3 +212,44 @@ a.card-title
   .title-section
     margin-top: 0
     margin-bottom: 7px
+
+.tab
+  &-item
+    min-width: 60px
+    margin: 0 10px
+    padding: 10px 0
+    text-decoration: none
+    color: inherit
+    text-align: center
+    border-bottom: 3px solid transparent
+    &-active
+      border-bottom: 3px solid $pink
+  &-content
+    &-js
+      height: 0
+      opacity: 0
+      transition: all 0.3s ease
+      overflow: hidden
+    &-active
+      opacity: 1
+      height: auto
+      overflow: unset
+
+.rating
+  display: flex
+  justify-content: space-between
+  width: 120px
+  font-size: 18px
+
+.border
+  border: 1px solid $border-light-gray
+  border-radius: $border-radius
+
+.dots
+  display: flex
+  align-items: center
+  height: 20px
+  font-size: 6px
+  cursor: pointer
+  .fa
+    margin: 0 2px

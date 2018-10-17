@@ -1,0 +1,47 @@
+mixin authorization()
+  section.authorization-wrap
+    +b.section-top
+      h2.title-section Авторизация
+    +b.authorization
+      +e.tab
+        +e('a').tab-item.tab-item.tab-item-active.tab-item-js(href="#enter") Вход
+        +e('a').tab-item.tab-item.tab-item-js(href="#reg") Регистрация
+      .tab-content-js.tab-content-active(id="enter")
+        +e.tab-content
+          +e.input-wrap.mb20
+            +e.input-label Логин
+            +e('input').input(type="text" placeholder="Введите ваш логин")
+          .d-flex.flex-column.mb15
+            +e.input-wrap
+              +e.input-label Пароль
+              +e('input').input(type="password" placeholder="Введите ваш пароль")
+            a(href='#').ml-auto.mt5 Забыли пароль?
+          button.btn.bg-pink Войти
+          span.c-gray.fz12.my10 Войдите через
+          +b.social
+            +e('a').item.__link.bg-vk(href="#")
+              i.fa.fa-vk
+            +e('a').item.__link.bg-fb(href="#")
+              i.fa.fa-facebook
+            +e('a').item.__link.bg-ok(href="#")
+              i.fa.fa-odnoklassniki
+      .tab-content-js(id="reg")
+        +e.tab-content
+          +e.input-wrap.mb20
+            +e.input-label Ваш e-mail
+            +e('input').input(type="email" placeholder="Введите ваш e-mail")
+          +e.input-wrap.mb20
+            +e.input-label Логин
+            +e('input').input(type="text" placeholder="Придумайте логин")
+          +e.input-wrap.mb20
+            +e.input-label Пароль
+            +e('input').input(type="password" placeholder="Придумайте пароль")
+          button.btn.bg-pink Войти
+          span.c-gray.fz12.my10 Войдите через
+          +b.social
+            +e('a').item.__link.bg-vk(href="#")
+              i.fa.fa-vk
+            +e('a').item.__link.bg-fb(href="#")
+              i.fa.fa-facebook
+            +e('a').item.__link.bg-ok(href="#")
+              i.fa.fa-odnoklassniki
