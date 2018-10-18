@@ -2,7 +2,35 @@
 
 .detail
   display: flex
+  flex-wrap: wrap
   padding-bottom: 30px
+  &-popup
+    position: absolute
+    z-index: 100
+    top: -500%
+    left: 0
+    width: 100%
+    padding: 20px 40px 40px
+    background-color: #fff
+    transition: $transition
+    @media (max-width: 991px)
+      padding: 20px 15px 40px
+    &__title
+      font-size: 24px
+      font-weight: 700
+      color: #000000
+      text-align: center
+    &__table
+      text-align: center
+      @media (max-width: 991px)
+        overflow: scroll
+      img
+        min-width: 700px
+    &-active
+      top: 0
+  &-wrap
+    position: relative
+    border-bottom: 1px solid $border-light-gray
   &-nav
     display: flex
     align-items: center
@@ -17,17 +45,34 @@
       &:hover
         color: $pink
   &__photo
+    display: flex
     width: 50%
+    padding-right: 15px
+    @media (max-width: 991px)
+      width: 100%
+      padding-right: 0
   &__text
     padding-left: 15px
     width: 50%
+    @media (max-width: 991px)
+      width: 100%
+      padding-left: 0
   &__main
     display: flex
+    flex-wrap: wrap
     &-item
       display: flex
       flex-direction: column
       align-items: flex-start
       width: 50%
+      &:first-child
+        padding-right: 20px
+      @media (max-width: 575px)
+        width: 100%
+        margin-bottom: 30px
+        padding-right: 0
+        &:last-child
+          margin-bottom: 0
     &-first
       display: flex
       align-items: center
@@ -62,12 +107,16 @@
     font-size: 12px
   &__tabs
     display: flex
+    flex-wrap: wrap
     justify-content: space-between
     margin: 20px -10px 0
     width: 450px
     text-transform: uppercase
     color: $gray
     font-size: 12px
+    @media (max-width: 575px)
+      justify-content: flex-start
+      width: unset
     .tab-item-active
       color: $black
   &__tab-content
@@ -87,3 +136,58 @@
   &__vallet
     margin: 5px 10px
     max-height: 25px
+
+.slick-review
+  &__btn
+    position: absolute
+    z-index: 1
+    top: 0
+    width: 40px
+    color: $border-input
+    font-size: 18px
+    background-color: #ffffff
+    border: 1px solid $border-input
+    border-radius: $border-radius
+    cursor: pointer
+    &-prev
+      right: 39px
+      text-align: left
+      border-top-right-radius: 0
+      border-bottom-right-radius: 0
+    &-next
+      right: 0
+      text-align: right
+      border-top-left-radius: 0
+      border-bottom-left-radius: 0
+  &__answer
+    padding: 20px 0 0 60px
+
+.slick-detail
+  width: 110px
+  &-main
+    width: calc(100% - 100px)
+    max-height: 500px
+    &__item
+      display: flex !important
+      align-items: center
+      justify-content: center
+      padding: 40px
+      @media (max-width: 575px)
+        padding: 10px
+      img
+        object-fit: contain
+  &__item
+    display: flex !important
+    align-items: center
+    justify-content: center
+    height: 100px !important
+    padding: 10px
+    margin: 5px
+    transition: $transition
+    cursor: pointer
+    &:hover
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2)
+
+.magnifier
+  img
+    max-height: unset

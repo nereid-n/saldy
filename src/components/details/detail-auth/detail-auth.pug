@@ -1,3 +1,152 @@
 mixin detail-auth()
-	+b.detail-auth
-		block
+  section.detail-wrap
+    +b.detail-nav
+      +e('a').link(href="#")
+        i.fa.fa-angle-left.mr15
+        span Назад в каталог
+      .dots
+        i.fa.fa-circle
+        i.fa.fa-circle
+        i.fa.fa-circle
+    +b.detail
+      +e.photo
+        -
+          let img = [
+          'assets/images/detail/detail-img1.jpg',
+          'assets/images/detail/detail-img2.jpg',
+          'assets/images/detail/detail-img3.jpg',
+          'assets/images/detail/detail-img4.jpg',
+          'assets/images/detail/detail-img5.jpg'
+          ]
+        +b.slick-detail
+          each item in img
+            +e.item
+              img(src= item)
+        +b.slick-detail-main
+          each item in img
+            +e.item
+              img.zoom(src=item)
+      +e.text
+        h2.title-section.mb15 КЛЕЙ ENIGMA "GALAXY" (5 МЛ)
+        +e.main
+          +e.main-item
+            span.c-gray.fz16 ENIGMA
+            .d-flex.mt10
+              +e.main-first
+                +e('span').old-price 715 руб.
+              +e.main-second
+                +e('span').new-price 399 руб.
+            .d-flex
+              +e.main-first
+                span Выкуп:
+              +e.main-second
+                +e.main-label.label.bg-pink 2 дня
+            .d-flex
+              +e.main-first
+                span Скидка:
+              +e.main-second
+                span.c-pink 40%
+            .d-flex
+              +e.main-first
+                span Артикул:
+              +e.main-second
+                span 1987-97798
+            .d-flex
+              +e.main-first
+                span Доставка:
+              +e.main-second
+                span.c-pink Воронеж
+                +e('span').small-link.ml10 (изменить)
+                +e('span').points 8 пунктов выдачи
+          +e.main-item
+            .d-flex.align-items-center.mb10
+              .rating
+                i.fa.fa-star.c-gold
+                i.fa.fa-star.c-gold
+                i.fa.fa-star.c-gold
+                i.fa.fa-star.c-gray-input
+                i.fa.fa-star.c-gray-input
+              span.ml10.c-gray (48 голосов)
+            +e('a').small-link Все товары ENIGMA
+              i.fa.fa-angle-right.ml10.fz16
+            .border.mt5
+              img(src="assets/images/detail/enigma.png")
+            a(href="#").btn.bg-gold.mt20.mb20 ВСЕ ТОВАРЫ СП
+              i.fa.fa-angle-right.ml10.fz18
+            a(href="#") Как заказывать в СП?
+        .d-flex.align-items-center.flex-wrap
+          .input-count-wrap.mr20.mt20
+            button.btn-count.js-btn-count.js-btn-count-minus -
+            input.input-count(type="number" value="1")
+            button.btn-count.js-btn-count.js-btn-count-plus +
+          button.btn.bg-pink.mr20.mt20
+            img.icon.icon-white.inject-me.mr10(src="assets/images/icons/shopping-cart.svg")
+            span.white-space-nowrap В КОРЗИНУ
+          img.like.inject-me.mr15.mt20(src='assets/images/icons/favorite.svg')
+          span.like-text.mt20 В ИЗБРАННОЕ
+        +e.tabs
+          +e('a').tab-item.tab-item.tab-item-active.tab-item-js(href="#description") Описание
+          +e('a').tab-item.tab-item.tab-item-js(href="#reviews") Отзывы о товаре
+          +e('a').tab-item.tab-item.tab-item-js(href="#payment") Доставка и оплата
+        .tab-content-js.tab-content-active(id="description")
+          +e.tab-content
+            p Объем: 5 мл <br>
+              | Скорость сцепки: 1 секунда. Идеален для опытных мастеров. <br>
+              | Срок носки: 7-8 недель. <br>
+              | Испарения: минимальные. Клей чёрного цвета с жидкой консистенцией и средней эластичностью. С ним вы сможете оперативно поправить любой недочёт, разъединить склейку или убрать излишек клея до его застывания. Условия работы: влажность 40-70%, температура 18-23°С <br>
+              | Срок годности: 6 месяцев, срок хранения в открытом виде — 2 месяца.
+        .tab-content-js(id="reviews")
+          +e.tab-content
+            .d-flex.flex-column.align-items-center
+              p Оставить отзыв могут только <a href="#" class="c-pink">авторизованные</a> пользователи
+              .d-flex.align-items-center.flex-wrap.mt10
+                span.mr20.mt5 Можете войти, используя соцсеть
+                +b.social.mt5
+                  +e('a').item.__link.bg-vk(href="#")
+                    i.fa.fa-vk
+                  +e('a').item.__link.bg-fb(href="#")
+                    i.fa.fa-facebook
+                  +e('a').item.__link.bg-ok(href="#")
+                    i.fa.fa-odnoklassniki
+        .tab-content-js(id="payment")
+          +e.tab-content
+            .d-flex.mb10
+              +e.payment-first
+                span Доставка в:
+              +e.payment-second
+                span.c-pink Воронеж
+                +e('span').small-link.ml10 (изменить)
+                +e('span').points 8 пунктов выдачи
+            .d-flex.c-gray
+              +e.payment-first
+                span СДЭК:
+              +e.payment-second
+                span.fz12 310 руб, 2-3 дня
+            .d-flex.c-gray
+              +e.payment-first
+                span Boxberry:
+              +e.payment-second
+                span.fz12 260 руб, 2-3 дня
+            .d-flex.c-gray
+              +e.payment-first
+                span Почта России:
+              +e.payment-second
+                span.fz12 от 280 руб, от 3 дней
+            .d-flex.flex-wrap.align-items-center.mt20
+              span.mr20 Оплата:
+              +e('img').vallet(src="assets/images/footer/viza.png")
+              +e('img').vallet(src="assets/images/footer/mast1.png")
+              +e('img').vallet(src="assets/images/footer/mast2.png")
+              +e('img').vallet(src="assets/images/detail/qiwi.png")
+              +e('img').vallet(src="assets/images/detail/yandex.png")
+        .d-flex.align-items-center.flex-wrap
+          a(href="#").c-pink.mr20.my10 Помочь собрать закупку?
+          .d-flex.align-items-center.flex-wrap
+            span.mr10 Поделиться:
+            +b.social
+              +e('a').item.__link.bg-vk(href="#")
+                i.fa.fa-vk
+              +e('a').item.__link.bg-fb(href="#")
+                i.fa.fa-facebook
+              +e('a').item.__link.bg-ok(href="#")
+                i.fa.fa-odnoklassniki

@@ -1,0 +1,11 @@
+extends ../components/layout-default/layout-default
+include ../components/main/breadcrumbs/breadcrumbs
+include ../components/catalog/catalog-brand/catalog-brand
+
+block head
+  - var pageTitle = 'Каталог';
+
+block content
+  - var breadcrumbs = ['Бренды', 'BARBARA']
+  +breadcrumbs(breadcrumbs)
+  +catalog-brand()

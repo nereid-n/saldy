@@ -26,7 +26,10 @@ $(document).ready(function() {
     $('.select').each(function() {
       var $this = $(this);
       $this.select2({
-        dropdownParent: $this.parents('.wrap-select')
+        dropdownParent: $this.parents('.wrap-select'),
+        placeholder: function(){
+          $(this).data('placeholder');
+        }
       }).on("select2:open", function () {
         $(".select2-results ul.select2-results__options").unbind("mousewheel");
         $('.select2-results').mCustomScrollbar({

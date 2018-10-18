@@ -10,6 +10,22 @@ mixin detail()
         i.fa.fa-circle
     +b.detail
       +e.photo
+        -
+          let img = [
+            'assets/images/detail/detail-img1.jpg',
+            'assets/images/detail/detail-img2.jpg',
+            'assets/images/detail/detail-img3.jpg',
+            'assets/images/detail/detail-img4.jpg',
+            'assets/images/detail/detail-img5.jpg'
+          ]
+        +b.slick-detail
+          each item in img
+            +e.item
+              img(src= item)
+        +b.slick-detail-main
+          each item in img
+            +e.item
+              img.zoom(src=item)
       +e.text
         h2.title-section.mb15 КЛЕЙ ENIGMA "GALAXY" (5 МЛ)
         +e.main
@@ -58,16 +74,16 @@ mixin detail()
             a(href="#").btn.bg-gold.mt20.mb20 ВСЕ ТОВАРЫ СП
               i.fa.fa-angle-right.ml10.fz18
             a(href="#") Как заказывать в СП?
-        .d-flex.align-items-center.mt20
-          .input-count-wrap.mr20
+        .d-flex.align-items-center.flex-wrap
+          .input-count-wrap.mr20.mt20
             button.btn-count.js-btn-count.js-btn-count-minus -
             input.input-count(type="number" value="1")
             button.btn-count.js-btn-count.js-btn-count-plus +
-          button.btn.bg-pink.mr20
+          button.btn.bg-pink.mr20.mt20
             img.icon.icon-white.inject-me.mr10(src="assets/images/icons/shopping-cart.svg")
             span.white-space-nowrap В КОРЗИНУ
-          img.like.inject-me.mr15(src='assets/images/icons/favorite.svg')
-          span.like-text В ИЗБРАННОЕ
+          img.like.inject-me.mr15.mt20(src='assets/images/icons/favorite.svg')
+          span.like-text.mt20 В ИЗБРАННОЕ
         +e.tabs
           +e('a').tab-item.tab-item.tab-item-active.tab-item-js(href="#description") Описание
           +e('a').tab-item.tab-item.tab-item-js(href="#reviews") Отзывы о товаре
@@ -81,6 +97,29 @@ mixin detail()
               |Срок годности: 6 месяцев, срок хранения в открытом виде — 2 месяца.
         .tab-content-js(id="reviews")
           +e.tab-content
+            +b.slick-review
+              - for(let i = 0; i < 5; i++)
+                +e.item
+                  .d-flex.flex-column
+                    .d-flex.align-items-center
+                      span.mr15 Ангелина
+                      .d-flex.align-items-center.c-gray
+                        img(src="assets/images/icons/clock.svg").icon-small.icon-gray.inject-me.mx5
+                        span 11.09.2018
+                    .rating.my10
+                      i.fa.fa-star.c-gold
+                      i.fa.fa-star.c-gold
+                      i.fa.fa-star.c-gold
+                      i.fa.fa-star.c-gray-input
+                      i.fa.fa-star.c-gray-input
+                    p Отличный клей, но немного жидковат. Очень быстрый, брать только профи, потому что новичку будет трудно за ним успевать. Доставили за неделю. Я довольна)
+                  +e.answer
+                    .d-flex.align-items-center.mb5
+                      span.mr15 MYSPCLUB
+                      .d-flex.align-items-center.c-gray
+                        img(src="assets/images/icons/clock.svg").icon-small.icon-gray.inject-me.mx5
+                        span 11.09.2018
+                    p Ангелина, спасибо за отзыв! Рады что Вам понравился наш сервис)
         .tab-content-js(id="payment")
           +e.tab-content
             .d-flex.mb10
@@ -112,13 +151,14 @@ mixin detail()
               +e('img').vallet(src="assets/images/footer/mast2.png")
               +e('img').vallet(src="assets/images/detail/qiwi.png")
               +e('img').vallet(src="assets/images/detail/yandex.png")
-        .d-flex.align-items-center
-          a(href="#").c-pink.mr20 Помочь собрать закупку?
-          span.mr10 Поделиться:
-          +b.social
-            +e('a').item.__link.bg-vk(href="#")
-              i.fa.fa-vk
-            +e('a').item.__link.bg-fb(href="#")
-              i.fa.fa-facebook
-            +e('a').item.__link.bg-ok(href="#")
-              i.fa.fa-odnoklassniki
+        .d-flex.align-items-center.flex-wrap
+          a(href="#").c-pink.mr20.my10 Помочь собрать закупку?
+          .d-flex.align-items-center.flex-wrap
+            span.mr10 Поделиться:
+            +b.social
+              +e('a').item.__link.bg-vk(href="#")
+                i.fa.fa-vk
+              +e('a').item.__link.bg-fb(href="#")
+                i.fa.fa-facebook
+              +e('a').item.__link.bg-ok(href="#")
+                i.fa.fa-odnoklassniki

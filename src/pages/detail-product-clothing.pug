@@ -1,0 +1,13 @@
+extends ../components/layout-default/layout-default
+include ../components/main/breadcrumbs/breadcrumbs
+include ../components/details/detail-clothing/detail-clothing
+include ../components/main/buy-also/buy-also
+
+block head
+  - var pageTitle = 'ОДЕЖДА';
+
+block content
+  - var breadcrumbs = ['Наращивание ресниц', 'Ресницы для наращивания', 'Черные ресницы ENIGMA, Изгиб D']
+  +breadcrumbs(breadcrumbs)
+  +detail-clothing()
+  +buy-also()
