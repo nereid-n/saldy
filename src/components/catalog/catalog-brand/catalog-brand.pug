@@ -1,11 +1,12 @@
 include ../../elements/leaders/leaders
 
-mixin catalog-brand()
+mixin catalog-brand(dataMain)
   +b.catalog-product
     +b.section-top.d-flex.justify-content-between.flex-wrap.align-items-center
       .mr15
         h2.title-section КАТАЛОГ BARBARA
-          img.like.inject-me.ml20(src='assets/images/icons/favorite.svg')
+          if dataMain.like
+            img.like.inject-me.ml20(src='assets/images/icons/favorite.svg')
         +e.count 840 товаров
       img.img-brand.my10(src="assets/images/index/brand1.png")
     +b.filter
@@ -13,19 +14,22 @@ mixin catalog-brand()
       +e.item.wrap-select.filter-select
         select.select(data-placeholder="Бренд")
           option
-          option Бренд
-          option Изгиб
-          option Цвет
+          option CC BROW
+          option BARBARA
+          option ENIGMA
       +e.item.wrap-select.filter-select
-        select.select
-          option Изгиб
-          option Цвет
-          option Бренд
+        select.select(data-placeholder="Цвет")
+          option
+          option Чёрные
+          option Коричневые
+          option Цветные
       +e.item.wrap-select.filter-select
-        select.select
-          option Цвет
-          option Бренд
-          option Изгиб
+        select.select(data-placeholder="Изгиб")
+          option
+          option Изгиб С
+          option Изгиб С+
+          option Изгиб D
+          option Изгиб СС
       +e.item.checkbox-wrap
         input(type="checkbox" id="check1")
         label(for="check1")
@@ -39,7 +43,8 @@ mixin catalog-brand()
       .ml-auto.d-flex.flex-wrap.align-items-center
         +e('span').item.fw-bold Сортировка
         +e.item.wrap-select.filter-select
-          select.select
+          select.select(data-placeholder="Цена по возрастанию")
+            option
             option Цена по возрастанию
             option Цена по убыванию
             option По размеру скидки

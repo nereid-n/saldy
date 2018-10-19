@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Каталог</title>
+    <link href="assets/libs/mCustomScrollbar/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+    <link href="assets/libs/select2/select2.min.css" rel="stylesheet">
+    <link href="assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/libs/slick/slick.css" rel="stylesheet">
+    <link href="assets/libs/video.js/video-js.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="root">
+      <header class="header">
+        <nav class="header__nav"><a href="#">О Нас</a><a href="#">Как заказать</a><a href="#">Доставка</a><a href="#">Новости</a><a href="#">Отзывы</a><a href="#">Поставщикам</a><a class="header__nav-active" href="#">Контакты</a>
+        </nav>
+        <div class="header__points"><img src="assets/images/icons/Plane.png"/>
+          <div class="header__select wrap-select">
+            <select class="select">
+              <option>Москва</option>
+              <option>Санкт-Петербург</option>
+              <option>Екатеринбург</option>
+              <option>Томск</option>
+              <option>Краснодар</option>
+              <option>Архангельск</option>
+              <option>Владивосток</option>
+              <option>Красноярск</option>
+            </select>
+          </div><span class="c-pink fz12">(1308 пунктов)</span>
+        </div>
+      </header>
+      <section class="header-bottom">
+        <div class="header-bottom__logo-wrap"><a class="logo" href="/"><span class="logo__top"><span class="logo__main c-pink">saldy</span><span class="logo__circle bg-black"><span>s</span></span></span><span class="logo__bottom">Скидки каждый день</span></a>
+        </div>
+        <form class="header-bottom__search">
+          <div class="input-btn">
+            <input class="input-width-btn" placeholder="Я ищу..."/>
+            <button class="header-bottom__search-btn btn btn-with-input bg-pink"><i class="fa fa-search"></i>
+            </button>
+          </div>
+        </form>
+        <div class="header-bottom__list">
+          <div class="header-bottom__list-item">
+            <div class="header-bottom__list-icon"><img class="inject-me" src="assets/images/icons/shopping-cart.svg"/>
+              <div class="count">3</div>
+            </div><a href="#">Корзина</a>
+          </div>
+          <div class="header-bottom__list-item">
+            <div class="header-bottom__list-icon"><img class="inject-me" src="assets/images/icons/favorite.svg"/>
+              <div class="count">0</div>
+            </div><a href="#">Избранное</a>
+          </div>
+          <div class="header-bottom__list-item header-bottom__reg">
+            <div class="header-bottom__list-icon"><img class="inject-me" src="assets/images/icons/avatar.svg"/>
+            </div>
+            <div class="d-flex"><a href="#">Войти</a><span class="px5">/</span><a href="#">Регистрация</a></div>
+            <div class="header-bottom__reg-dropdown-wrap">
+              <div class="header-bottom__reg-dropdown"><a class="btn bg-pink width100">Войти</a><span class="c-gray fz12 my10">Войдите через</span>
+                <div class="social"><a class="social__item social__link bg-vk" href="#"><i class="fa fa-vk"></i></a><a class="social__item social__link bg-fb" href="#"><i class="fa fa-facebook"></i></a><a class="social__item social__link bg-ok" href="#"><i class="fa fa-odnoklassniki"></i></a>
+                </div><span class="c-gray fz12 my10">Новый покупатель?</span><a class="btn bg-gold width100">Регистрация</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <nav class="menu">
+        <div class="menu__list"><a class="menu__item menu__active" href="#">Лэшмейкер</a><a class="menu__item" href="#">Ногтевой сервис</a><a class="menu__item" href="#">Бровист</a><a class="menu__item" href="#">Шугаринг</a><a class="menu__item" href="#">SHOP</a>
+        </div>
+        <div class="menu__catalog-wrap">
+          <button class="menu__btn-catalog menu__btn-catalog-js"><i class="fa fa-bars"></i>КАТАЛОГ
+          </button>
+          <ul class="menu__catalog">
+            <li class="menu__catalog-link"><a href="#">Все Совместные Покупки</a>
+            </li>
+            <li class="menu__catalog-item-wrap"><span class="menu__catalog-item">Бренды</span>
+              <div class="menu__right-menu-wrap">
+                <div class="menu__right-menu">
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a><a class="menu__right-menu-link" href="#">Праймеры</a><a class="menu__right-menu-link" href="#">Ремуверы</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a><a class="menu__right-menu-link" href="#">Праймеры</a><a class="menu__right-menu-link" href="#">Ремуверы</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Хранение</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Хранение</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Фирменные товары</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Фирменные товары</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="menu__catalog-item-wrap"><span class="menu__catalog-item">Наращивание ресниц</span>
+              <div class="menu__right-menu-wrap">
+                <div class="menu__right-menu">
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a><a class="menu__right-menu-link" href="#">Праймеры</a><a class="menu__right-menu-link" href="#">Ремуверы</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a><a class="menu__right-menu-link" href="#">Праймеры</a><a class="menu__right-menu-link" href="#">Ремуверы</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Хранение</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Хранение</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Фирменные товары</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Фирменные товары</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="menu__catalog-item-wrap"><span class="menu__catalog-item">Оборудование</span>
+              <div class="menu__right-menu-wrap">
+                <div class="menu__right-menu">
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a><a class="menu__right-menu-link" href="#">Праймеры</a><a class="menu__right-menu-link" href="#">Ремуверы</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a><a class="menu__right-menu-link" href="#">Праймеры</a><a class="menu__right-menu-link" href="#">Ремуверы</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Хранение</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Хранение</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Фирменные товары</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Фирменные товары</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="menu__catalog-item-wrap"><span class="menu__catalog-item">Оформление бровей</span>
+              <div class="menu__right-menu-wrap">
+                <div class="menu__right-menu">
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a><a class="menu__right-menu-link" href="#">Праймеры</a><a class="menu__right-menu-link" href="#">Ремуверы</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a><a class="menu__right-menu-link" href="#">Праймеры</a><a class="menu__right-menu-link" href="#">Ремуверы</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Хранение</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Хранение</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Фирменные товары</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Фирменные товары</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="menu__catalog-item-wrap"><span class="menu__catalog-item">Косметика</span>
+              <div class="menu__right-menu-wrap">
+                <div class="menu__right-menu">
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a><a class="menu__right-menu-link" href="#">Праймеры</a><a class="menu__right-menu-link" href="#">Ремуверы</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a><a class="menu__right-menu-link" href="#">Праймеры</a><a class="menu__right-menu-link" href="#">Ремуверы</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Хранение</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Хранение</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Фирменные товары</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Фирменные товары</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="menu__catalog-item-wrap"><span class="menu__catalog-item">Аксессуары</span>
+              <div class="menu__right-menu-wrap">
+                <div class="menu__right-menu">
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a><a class="menu__right-menu-link" href="#">Праймеры</a><a class="menu__right-menu-link" href="#">Ремуверы</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a><a class="menu__right-menu-link" href="#">Праймеры</a><a class="menu__right-menu-link" href="#">Ремуверы</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Хранение</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Хранение</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Фирменные товары</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Фирменные товары</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="menu__catalog-item-wrap"><span class="menu__catalog-item">Ламинирование и биозавивка</span>
+              <div class="menu__right-menu-wrap">
+                <div class="menu__right-menu">
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a><a class="menu__right-menu-link" href="#">Праймеры</a><a class="menu__right-menu-link" href="#">Ремуверы</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a><a class="menu__right-menu-link" href="#">Праймеры</a><a class="menu__right-menu-link" href="#">Ремуверы</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Хранение</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Хранение</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Фирменные товары</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Фирменные товары</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="menu__catalog-item-wrap"><span class="menu__catalog-item">Шугаринг</span>
+              <div class="menu__right-menu-wrap">
+                <div class="menu__right-menu">
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a><a class="menu__right-menu-link" href="#">Праймеры</a><a class="menu__right-menu-link" href="#">Ремуверы</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a><a class="menu__right-menu-link" href="#">Праймеры</a><a class="menu__right-menu-link" href="#">Ремуверы</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Хранение</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Хранение</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Фирменные товары</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Фирменные товары</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="menu__catalog-item-wrap"><span class="menu__catalog-item">Фирменная одежда</span>
+              <div class="menu__right-menu-wrap">
+                <div class="menu__right-menu">
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Ресницы для наращивания</span><a class="menu__right-menu-link" href="#">Чёрные</a><a class="menu__right-menu-link" href="#">Коричневые</a><a class="menu__right-menu-link" href="#">Цветные</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a><a class="menu__right-menu-link" href="#">Праймеры</a><a class="menu__right-menu-link" href="#">Ремуверы</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Препараты</span><a class="menu__right-menu-link" href="#">Активаторы</a><a class="menu__right-menu-link" href="#">Клей</a><a class="menu__right-menu-link" href="#">Обезжириватели</a><a class="menu__right-menu-link" href="#">Праймеры</a><a class="menu__right-menu-link" href="#">Ремуверы</a>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Хранение</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Хранение</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Фирменные товары</span>
+                  </div>
+                  <div class="menu__right-menu-block"><span class="fw-bold">Фирменные товары</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <main class="main">
+        <nav class="breadcrumbs"><a class="breadcrumbs__item" href="/">Главная</a><span class="px5">/</span><a class="breadcrumbs__item" href="#">Все совместные покупки</a>
+        </nav>
+        <div class="catalog-product">
+          <div class="section-top d-flex justify-content-between flex-wrap align-items-center">
+            <div class="mr15">
+              <h2 class="title-section">Каталог СП</h2>
+              <div class="section-top__count">109 товаров
+              </div>
+            </div>
+          </div>
+          <div class="filter"><span class="filter__item fw-bold">Фильтр</span>
+            <div class="filter__item wrap-select filter-select">
+              <select class="select" data-placeholder="Выкуп">
+                <option></option>
+                <option>2 дня</option>
+                <option>3 дня</option>
+                <option>4 дня</option>
+              </select>
+            </div>
+            <div class="filter__item wrap-select filter-select">
+              <select class="select" data-placeholder="Собрано">
+                <option></option>
+                <option>20%</option>
+                <option>30%</option>
+                <option>40%</option>
+              </select>
+            </div>
+            <div class="filter__item wrap-select filter-select">
+              <select class="select" data-placeholder="Скидка">
+                <option></option>
+                <option>-30%</option>
+                <option>-42%</option>
+                <option>-50%</option>
+                <option>-55%</option>
+              </select>
+            </div>
+            <div class="filter__item checkbox-wrap">
+              <input type="checkbox" id="check1"/>
+              <label for="check1">
+                <div class="checkbox"></div>До выкупа меньше 24ч
+              </label>
+            </div>
+            <div class="filter__item checkbox-wrap">
+              <input type="checkbox" id="check2"/>
+              <label for="check2">
+                <div class="checkbox"></div>Не показывать завершенные
+              </label>
+            </div>
+          </div>
+          <div class="d-flex flex-wrap">
+            <ul class="catalog-menu">
+              <li class="catalog-menu__item catalog-menu__item-js"><span class="catalog-menu__title">Клей для наращивания</span><span class="fz12 c-gray">328</span>
+                <ul class="catalog-menu__submenu"><li><a class="catalog-menu__item" href="#"><span class="catalog-menu__title">Клей быстрый (до 1 сек)</span><span class="fz12 c-gray">117</span></a></li><li><a class="catalog-menu__item" href="#"><span class="catalog-menu__title">Клей средний (от 1 сек)</span><span class="fz12 c-gray">96</span></a></li><li><a class="catalog-menu__item" href="#"><span class="catalog-menu__title">Клей медленный (1,5 сек)</span><span class="fz12 c-gray">55</span></a></li>
+                </ul>
+              </li>
+              <li class="catalog-menu__item catalog-menu__item-js"><span class="catalog-menu__title">Клей для наращивания</span><span class="fz12 c-gray">41</span>
+                <ul class="catalog-menu__submenu"><li><a class="catalog-menu__item" href="#"><span class="catalog-menu__title">Клей быстрый (до 1 сек)</span><span class="fz12 c-gray">117</span></a></li><li><a class="catalog-menu__item" href="#"><span class="catalog-menu__title">Клей средний (от 1 сек)</span><span class="fz12 c-gray">96</span></a></li><li><a class="catalog-menu__item" href="#"><span class="catalog-menu__title">Клей медленный (1,5 сек)</span><span class="fz12 c-gray">55</span></a></li>
+                </ul>
+              </li>
+              <li class="catalog-menu__item catalog-menu__item-js"><span class="catalog-menu__title">Препараты</span><span class="fz12 c-gray">187</span>
+                <ul class="catalog-menu__submenu"><li><a class="catalog-menu__item" href="#"><span class="catalog-menu__title">Клей быстрый (до 1 сек)</span><span class="fz12 c-gray">117</span></a></li><li><a class="catalog-menu__item" href="#"><span class="catalog-menu__title">Клей средний (от 1 сек)</span><span class="fz12 c-gray">96</span></a></li><li><a class="catalog-menu__item" href="#"><span class="catalog-menu__title">Клей медленный (1,5 сек)</span><span class="fz12 c-gray">55</span></a></li>
+                </ul>
+              </li>
+              <li class="catalog-menu__item catalog-menu__item-js"><span class="catalog-menu__title">Ламинирование и биозавивка</span><span class="fz12 c-gray">187</span>
+                <ul class="catalog-menu__submenu"><li><a class="catalog-menu__item" href="#"><span class="catalog-menu__title">Клей быстрый (до 1 сек)</span><span class="fz12 c-gray">117</span></a></li><li><a class="catalog-menu__item" href="#"><span class="catalog-menu__title">Клей средний (от 1 сек)</span><span class="fz12 c-gray">96</span></a></li><li><a class="catalog-menu__item" href="#"><span class="catalog-menu__title">Клей медленный (1,5 сек)</span><span class="fz12 c-gray">55</span></a></li>
+                </ul>
+              </li>
+              <li class="catalog-menu__item catalog-menu__item-js"><span class="catalog-menu__title">Полуперманентная тушь</span><span class="fz12 c-gray">165</span>
+                <ul class="catalog-menu__submenu"><li><a class="catalog-menu__item" href="#"><span class="catalog-menu__title">Клей быстрый (до 1 сек)</span><span class="fz12 c-gray">117</span></a></li><li><a class="catalog-menu__item" href="#"><span class="catalog-menu__title">Клей средний (от 1 сек)</span><span class="fz12 c-gray">96</span></a></li><li><a class="catalog-menu__item" href="#"><span class="catalog-menu__title">Клей медленный (1,5 сек)</span><span class="fz12 c-gray">55</span></a></li>
+                </ul>
+              </li>
+              <li class="catalog-menu__item catalog-menu__item-js"><span class="catalog-menu__title">Изоляция нижних ресниц</span><span class="fz12 c-gray">201</span>
+                <ul class="catalog-menu__submenu"><li><a class="catalog-menu__item" href="#"><span class="catalog-menu__title">Клей быстрый (до 1 сек)</span><span class="fz12 c-gray">117</span></a></li><li><a class="catalog-menu__item" href="#"><span class="catalog-menu__title">Клей средний (от 1 сек)</span><span class="fz12 c-gray">96</span></a></li><li><a class="catalog-menu__item" href="#"><span class="catalog-menu__title">Клей медленный (1,5 сек)</span><span class="fz12 c-gray">55</span></a></li>
+                </ul>
+              </li>
+              <li class="catalog-menu__item catalog-menu__item-js"><span class="catalog-menu__title">Пинцеты</span><span class="fz12 c-gray">23</span>
+                <ul class="catalog-menu__submenu"><li><a class="catalog-menu__item" href="#"><span class="catalog-menu__title">Клей быстрый (до 1 сек)</span><span class="fz12 c-gray">117</span></a></li><li><a class="catalog-menu__item" href="#"><span class="catalog-menu__title">Клей средний (от 1 сек)</span><span class="fz12 c-gray">96</span></a></li><li><a class="catalog-menu__item" href="#"><span class="catalog-menu__title">Клей медленный (1,5 сек)</span><span class="fz12 c-gray">55</span></a></li>
+                </ul>
+              </li>
+              <li class="catalog-menu__item catalog-menu__item-js"><span class="catalog-menu__title">Профессиональное освещение</span><span class="fz12 c-gray">14</span>
+                <ul class="catalog-menu__submenu"><li><a class="catalog-menu__item" href="#"><span class="catalog-menu__title">Клей быстрый (до 1 сек)</span><span class="fz12 c-gray">117</span></a></li><li><a class="catalog-menu__item" href="#"><span class="catalog-menu__title">Клей средний (от 1 сек)</span><span class="fz12 c-gray">96</span></a></li><li><a class="catalog-menu__item" href="#"><span class="catalog-menu__title">Клей медленный (1,5 сек)</span><span class="fz12 c-gray">55</span></a></li>
+                </ul>
+              </li>
+              <li class="catalog-menu__item catalog-menu__item-js"><span class="catalog-menu__title">Средства по уходу</span><span class="fz12 c-gray">11</span>
+                <ul class="catalog-menu__submenu"><li><a class="catalog-menu__item" href="#"><span class="catalog-menu__title">Клей быстрый (до 1 сек)</span><span class="fz12 c-gray">117</span></a></li><li><a class="catalog-menu__item" href="#"><span class="catalog-menu__title">Клей средний (от 1 сек)</span><span class="fz12 c-gray">96</span></a></li><li><a class="catalog-menu__item" href="#"><span class="catalog-menu__title">Клей медленный (1,5 сек)</span><span class="fz12 c-gray">55</span></a></li>
+                </ul>
+              </li>
+              <li class="catalog-menu__item catalog-menu__item-js"><span class="catalog-menu__title">Фирменная одежда</span><span class="fz12 c-gray">28</span>
+                <ul class="catalog-menu__submenu"><li><a class="catalog-menu__item" href="#"><span class="catalog-menu__title">Клей быстрый (до 1 сек)</span><span class="fz12 c-gray">117</span></a></li><li><a class="catalog-menu__item" href="#"><span class="catalog-menu__title">Клей средний (от 1 сек)</span><span class="fz12 c-gray">96</span></a></li><li><a class="catalog-menu__item" href="#"><span class="catalog-menu__title">Клей медленный (1,5 сек)</span><span class="fz12 c-gray">55</span></a></li>
+                </ul>
+              </li>
+              <li class="catalog-menu__item catalog-menu__item-js"><span class="catalog-menu__title">Расходные материалы </span><span class="fz12 c-gray">89</span>
+                <ul class="catalog-menu__submenu"><li><a class="catalog-menu__item" href="#"><span class="catalog-menu__title">Клей быстрый (до 1 сек)</span><span class="fz12 c-gray">117</span></a></li><li><a class="catalog-menu__item" href="#"><span class="catalog-menu__title">Клей средний (от 1 сек)</span><span class="fz12 c-gray">96</span></a></li><li><a class="catalog-menu__item" href="#"><span class="catalog-menu__title">Клей медленный (1,5 сек)</span><span class="fz12 c-gray">55</span></a></li>
+                </ul>
+              </li>
+              <li class="catalog-menu__item catalog-menu__item-js"><span class="catalog-menu__title">Фирменная продукция</span><span class="fz12 c-gray">18</span>
+                <ul class="catalog-menu__submenu"><li><a class="catalog-menu__item" href="#"><span class="catalog-menu__title">Клей быстрый (до 1 сек)</span><span class="fz12 c-gray">117</span></a></li><li><a class="catalog-menu__item" href="#"><span class="catalog-menu__title">Клей средний (от 1 сек)</span><span class="fz12 c-gray">96</span></a></li><li><a class="catalog-menu__item" href="#"><span class="catalog-menu__title">Клей медленный (1,5 сек)</span><span class="fz12 c-gray">55</span></a></li>
+                </ul>
+              </li>
+              <li class="catalog-menu__item catalog-menu__item-js"><span class="catalog-menu__title">Хранение</span><span class="fz12 c-gray">61</span>
+                <ul class="catalog-menu__submenu"><li><a class="catalog-menu__item" href="#"><span class="catalog-menu__title">Клей быстрый (до 1 сек)</span><span class="fz12 c-gray">117</span></a></li><li><a class="catalog-menu__item" href="#"><span class="catalog-menu__title">Клей средний (от 1 сек)</span><span class="fz12 c-gray">96</span></a></li><li><a class="catalog-menu__item" href="#"><span class="catalog-menu__title">Клей медленный (1,5 сек)</span><span class="fz12 c-gray">55</span></a></li>
+                </ul>
+              </li>
+              <li class="catalog-menu__item catalog-menu__item-js"><span class="catalog-menu__title">Стартовые наборы</span><span class="fz12 c-gray">6</span>
+                <ul class="catalog-menu__submenu"><li><a class="catalog-menu__item" href="#"><span class="catalog-menu__title">Клей быстрый (до 1 сек)</span><span class="fz12 c-gray">117</span></a></li><li><a class="catalog-menu__item" href="#"><span class="catalog-menu__title">Клей средний (от 1 сек)</span><span class="fz12 c-gray">96</span></a></li><li><a class="catalog-menu__item" href="#"><span class="catalog-menu__title">Клей медленный (1,5 сек)</span><span class="fz12 c-gray">55</span></a></li>
+                </ul>
+              </li>
+              <li class="catalog-menu__item catalog-menu__item-js"><span class="catalog-menu__title">Оформление бровей</span><span class="fz12 c-gray">32</span>
+                <ul class="catalog-menu__submenu"><li><a class="catalog-menu__item" href="#"><span class="catalog-menu__title">Клей быстрый (до 1 сек)</span><span class="fz12 c-gray">117</span></a></li><li><a class="catalog-menu__item" href="#"><span class="catalog-menu__title">Клей средний (от 1 сек)</span><span class="fz12 c-gray">96</span></a></li><li><a class="catalog-menu__item" href="#"><span class="catalog-menu__title">Клей медленный (1,5 сек)</span><span class="fz12 c-gray">55</span></a></li>
+                </ul>
+              </li>
+            </ul>
+            <div class="catalog-right">
+              <div class="grid">
+                <div class="card-discount card card-normal grid-item undefined">
+                  <div class="card-discount__top"><img class="bg-img" src="assets/images/index/discount1.png"/>
+                    <div class="card-discount__like"><img class="inject-me like" src="assets/images/icons/favorite.svg"/>
+                    </div>
+                    <div class="title-on-img text-center"><span class="text-uppercase fz18">скидка 40%</span></div>
+                  </div>
+                  <div class="card-discount__bottom"><a class="my0 card-title" href="#">BARBARA</a>
+                    <p class="mt10 mb30">Материалы для наращивания и ламинирования ресниц</p>
+                    <div class="d-flex align-items-center"><span>Выкуп:</span>
+                      <div class="label ml10 bg-pink">2 дня</div>
+                    </div>
+                    <div class="d-flex align-items-center mt10"><span>Собрано:</span>
+                      <div class="progress-wrap ml10">
+                        <div class="progress-bar">
+                          <div class="progress bg-pink" style="width: 59%"></div>
+                        </div><span class="progress-percent">59%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-discount card card-normal grid-item undefined">
+                  <div class="card-discount__top"><img class="bg-img" src="assets/images/index/discount2.png"/>
+                    <div class="card-discount__like"><img class="inject-me like like-active" src="assets/images/icons/favorite.svg"/>
+                    </div>
+                    <div class="title-on-img text-center"><span class="text-uppercase fz18">скидка 32%</span></div>
+                  </div>
+                  <div class="card-discount__bottom"><a class="my0 card-title" href="#">BARBARA</a>
+                    <p class="mt10 mb30">Материалы для наращивания и ламинирования ресниц</p>
+                    <div class="d-flex align-items-center"><span>Выкуп:</span>
+                      <div class="label ml10 bg-gold">3 дня</div>
+                    </div>
+                    <div class="d-flex align-items-center mt10"><span>Собрано:</span>
+                      <div class="progress-wrap ml10">
+                        <div class="progress-bar">
+                          <div class="progress bg-gold" style="width: 43%"></div>
+                        </div><span class="progress-percent">43%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-discount card card-normal grid-item undefined">
+                  <div class="card-discount__top"><img class="bg-img" src="assets/images/index/discount3.png"/>
+                    <div class="card-discount__like"><img class="inject-me like" src="assets/images/icons/favorite.svg"/>
+                    </div>
+                    <div class="title-on-img text-center"><span class="text-uppercase fz18">скидка 56%</span></div>
+                  </div>
+                  <div class="card-discount__bottom"><a class="my0 card-title" href="#">BARBARA</a>
+                    <p class="mt10 mb30">Материалы для оформления и окрашивания бровей</p>
+                    <div class="d-flex align-items-center"><span>Выкуп:</span>
+                      <div class="label ml10 bg-pink">16:31:48</div>
+                    </div>
+                    <div class="d-flex align-items-center mt10"><span>Собрано:</span>
+                      <div class="progress-wrap ml10">
+                        <div class="progress-bar">
+                          <div class="progress bg-pink" style="width: 91%"></div>
+                        </div><span class="progress-percent">91%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-discount card card-normal grid-item card-disabled">
+                  <div class="card-discount__top"><img class="bg-img" src="assets/images/index/discount4.png"/>
+                    <div class="card-discount__like"><img class="inject-me like" src="assets/images/icons/favorite.svg"/>
+                    </div>
+                    <div class="title-on-img text-center"><span class="text-uppercase fz18">скидка 33%</span></div>
+                  </div>
+                  <div class="card-discount__bottom"><a class="my0 card-title" href="#">BARBARA</a>
+                    <p class="mt10 mb30">Материалы для оформления и окрашивания бровей</p>
+                    <div class="d-flex align-items-center"><span>Выкуп:</span>
+                      <div class="label ml10 bg-pink">Завершено</div>
+                    </div>
+                    <div class="d-flex align-items-center mt10"><span>Собрано:</span>
+                      <div class="progress-wrap ml10">
+                        <div class="progress-bar">
+                          <div class="progress bg-pink" style="width: 118%"></div>
+                        </div><span class="progress-percent">118%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-discount card card-normal grid-item undefined">
+                  <div class="card-discount__top"><img class="bg-img" src="assets/images/index/discount2.png"/>
+                    <div class="card-discount__like"><img class="inject-me like like-active" src="assets/images/icons/favorite.svg"/>
+                    </div>
+                    <div class="title-on-img text-center"><span class="text-uppercase fz18">скидка 32%</span></div>
+                  </div>
+                  <div class="card-discount__bottom"><a class="my0 card-title" href="#">BARBARA</a>
+                    <p class="mt10 mb30">Материалы для наращивания и ламинирования ресниц</p>
+                    <div class="d-flex align-items-center"><span>Выкуп:</span>
+                      <div class="label ml10 bg-gold">3 дня</div>
+                    </div>
+                    <div class="d-flex align-items-center mt10"><span>Собрано:</span>
+                      <div class="progress-wrap ml10">
+                        <div class="progress-bar">
+                          <div class="progress bg-gold" style="width: 43%"></div>
+                        </div><span class="progress-percent">43%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-discount card card-normal grid-item undefined">
+                  <div class="card-discount__top"><img class="bg-img" src="assets/images/index/discount3.png"/>
+                    <div class="card-discount__like"><img class="inject-me like" src="assets/images/icons/favorite.svg"/>
+                    </div>
+                    <div class="title-on-img text-center"><span class="text-uppercase fz18">скидка 56%</span></div>
+                  </div>
+                  <div class="card-discount__bottom"><a class="my0 card-title" href="#">BARBARA</a>
+                    <p class="mt10 mb30">Материалы для оформления и окрашивания бровей</p>
+                    <div class="d-flex align-items-center"><span>Выкуп:</span>
+                      <div class="label ml10 bg-pink">16:31:48</div>
+                    </div>
+                    <div class="d-flex align-items-center mt10"><span>Собрано:</span>
+                      <div class="progress-wrap ml10">
+                        <div class="progress-bar">
+                          <div class="progress bg-pink" style="width: 91%"></div>
+                        </div><span class="progress-percent">91%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-discount card card-normal grid-item card-disabled">
+                  <div class="card-discount__top"><img class="bg-img" src="assets/images/index/discount4.png"/>
+                    <div class="card-discount__like"><img class="inject-me like" src="assets/images/icons/favorite.svg"/>
+                    </div>
+                    <div class="title-on-img text-center"><span class="text-uppercase fz18">скидка 33%</span></div>
+                  </div>
+                  <div class="card-discount__bottom"><a class="my0 card-title" href="#">BARBARA</a>
+                    <p class="mt10 mb30">Материалы для оформления и окрашивания бровей</p>
+                    <div class="d-flex align-items-center"><span>Выкуп:</span>
+                      <div class="label ml10 bg-pink">Завершено</div>
+                    </div>
+                    <div class="d-flex align-items-center mt10"><span>Собрано:</span>
+                      <div class="progress-wrap ml10">
+                        <div class="progress-bar">
+                          <div class="progress bg-pink" style="width: 118%"></div>
+                        </div><span class="progress-percent">118%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-discount card card-normal grid-item undefined">
+                  <div class="card-discount__top"><img class="bg-img" src="assets/images/index/discount2.png"/>
+                    <div class="card-discount__like"><img class="inject-me like like-active" src="assets/images/icons/favorite.svg"/>
+                    </div>
+                    <div class="title-on-img text-center"><span class="text-uppercase fz18">скидка 32%</span></div>
+                  </div>
+                  <div class="card-discount__bottom"><a class="my0 card-title" href="#">BARBARA</a>
+                    <p class="mt10 mb30">Материалы для наращивания и ламинирования ресниц</p>
+                    <div class="d-flex align-items-center"><span>Выкуп:</span>
+                      <div class="label ml10 bg-gold">3 дня</div>
+                    </div>
+                    <div class="d-flex align-items-center mt10"><span>Собрано:</span>
+                      <div class="progress-wrap ml10">
+                        <div class="progress-bar">
+                          <div class="progress bg-gold" style="width: 43%"></div>
+                        </div><span class="progress-percent">43%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-discount card card-normal grid-item undefined">
+                  <div class="card-discount__top"><img class="bg-img" src="assets/images/index/discount3.png"/>
+                    <div class="card-discount__like"><img class="inject-me like" src="assets/images/icons/favorite.svg"/>
+                    </div>
+                    <div class="title-on-img text-center"><span class="text-uppercase fz18">скидка 56%</span></div>
+                  </div>
+                  <div class="card-discount__bottom"><a class="my0 card-title" href="#">BARBARA</a>
+                    <p class="mt10 mb30">Материалы для оформления и окрашивания бровей</p>
+                    <div class="d-flex align-items-center"><span>Выкуп:</span>
+                      <div class="label ml10 bg-pink">16:31:48</div>
+                    </div>
+                    <div class="d-flex align-items-center mt10"><span>Собрано:</span>
+                      <div class="progress-wrap ml10">
+                        <div class="progress-bar">
+                          <div class="progress bg-pink" style="width: 91%"></div>
+                        </div><span class="progress-percent">91%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-discount card card-normal grid-item card-disabled">
+                  <div class="card-discount__top"><img class="bg-img" src="assets/images/index/discount4.png"/>
+                    <div class="card-discount__like"><img class="inject-me like" src="assets/images/icons/favorite.svg"/>
+                    </div>
+                    <div class="title-on-img text-center"><span class="text-uppercase fz18">скидка 33%</span></div>
+                  </div>
+                  <div class="card-discount__bottom"><a class="my0 card-title" href="#">BARBARA</a>
+                    <p class="mt10 mb30">Материалы для оформления и окрашивания бровей</p>
+                    <div class="d-flex align-items-center"><span>Выкуп:</span>
+                      <div class="label ml10 bg-pink">Завершено</div>
+                    </div>
+                    <div class="d-flex align-items-center mt10"><span>Собрано:</span>
+                      <div class="progress-wrap ml10">
+                        <div class="progress-bar">
+                          <div class="progress bg-pink" style="width: 118%"></div>
+                        </div><span class="progress-percent">118%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-discount card card-normal grid-item undefined">
+                  <div class="card-discount__top"><img class="bg-img" src="assets/images/index/discount2.png"/>
+                    <div class="card-discount__like"><img class="inject-me like like-active" src="assets/images/icons/favorite.svg"/>
+                    </div>
+                    <div class="title-on-img text-center"><span class="text-uppercase fz18">скидка 32%</span></div>
+                  </div>
+                  <div class="card-discount__bottom"><a class="my0 card-title" href="#">BARBARA</a>
+                    <p class="mt10 mb30">Материалы для наращивания и ламинирования ресниц</p>
+                    <div class="d-flex align-items-center"><span>Выкуп:</span>
+                      <div class="label ml10 bg-gold">3 дня</div>
+                    </div>
+                    <div class="d-flex align-items-center mt10"><span>Собрано:</span>
+                      <div class="progress-wrap ml10">
+                        <div class="progress-bar">
+                          <div class="progress bg-gold" style="width: 43%"></div>
+                        </div><span class="progress-percent">43%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-discount card card-normal grid-item undefined">
+                  <div class="card-discount__top"><img class="bg-img" src="assets/images/index/discount3.png"/>
+                    <div class="card-discount__like"><img class="inject-me like" src="assets/images/icons/favorite.svg"/>
+                    </div>
+                    <div class="title-on-img text-center"><span class="text-uppercase fz18">скидка 56%</span></div>
+                  </div>
+                  <div class="card-discount__bottom"><a class="my0 card-title" href="#">BARBARA</a>
+                    <p class="mt10 mb30">Материалы для оформления и окрашивания бровей</p>
+                    <div class="d-flex align-items-center"><span>Выкуп:</span>
+                      <div class="label ml10 bg-pink">16:31:48</div>
+                    </div>
+                    <div class="d-flex align-items-center mt10"><span>Собрано:</span>
+                      <div class="progress-wrap ml10">
+                        <div class="progress-bar">
+                          <div class="progress bg-pink" style="width: 91%"></div>
+                        </div><span class="progress-percent">91%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="products-bottom">
+            <nav class="catalog-pages"><a class="catalog-pages__item mr-auto" href="#"><i class="fa fa-angle-left"></i></a><a class="catalog-pages__item" href="#">1</a><a class="catalog-pages__item" href="#">2</a><a class="catalog-pages__item" href="#">3</a><a class="catalog-pages__item" href="#">4</a><a class="catalog-pages__item catalog-pages__item-active" href="#">5</a><a class="catalog-pages__item" href="#">6</a><a class="catalog-pages__item" href="#">7</a><a class="catalog-pages__item" href="#">8</a><a class="catalog-pages__item" href="#">9</a><a class="catalog-pages__item ml-auto" href="#"><i class="fa fa-angle-right"></i></a>
+            </nav>
+            <div class="products-count"><span class="products-count__item">Товаров на странице</span>
+              <div class="d-flex flex-wrap">
+                <div class="products-count__item round-radio">
+                  <input type="radio" id="count1" name="radio-count"/>
+                  <label for="count1"> 24</label>
+                </div>
+                <div class="products-count__item round-radio">
+                  <input type="radio" id="count2" name="radio-count"/>
+                  <label for="count2"> 48</label>
+                </div>
+                <div class="products-count__item round-radio">
+                  <input type="radio" id="count3" name="radio-count"/>
+                  <label for="count3"> 96</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__top">
+          <div class="footer__item"><span class="footer__title">Покупателям</span><a class="footer__link" href="#">Как  заказать</a><a class="footer__link" href="#">Доставка</a><a class="footer__link" href="#">Оплата</a><a class="footer__link" href="#">Возврат товаров</a><a class="footer__link" href="#">Пользовательское <br> соглашение</a>
+          </div>
+          <div class="footer__item"><span class="footer__title">Компания</span><a class="footer__link" href="#">О нас</a><a class="footer__link" href="#">Отзывы</a><a class="footer__link" href="#">Новости</a><a class="footer__link" href="#">Контакты</a>
+          </div>
+          <div class="footer__item"><span class="footer__title">ПРИНИМАЕМ ОПЛАТУ</span>
+            <div class="social">
+              <div class="social__item"><img src="assets/images/footer/viza.png"/>
+              </div>
+              <div class="social__item"><img src="assets/images/footer/mast1.png"/>
+              </div>
+              <div class="social__item"><img src="assets/images/footer/mast2.png"/>
+              </div>
+            </div><span class="footer__title footer__title-second">ПОДПИСКА НА НОВОСТИ</span>
+            <form class="footer__search">
+              <div class="input-btn">
+                <input class="input-width-btn" placeholder="Введите email"/>
+                <button class="footer__search-btn btn btn-with-input bg-pink"><i class="fa fa-angle-right"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="footer__item"><span class="footer__title">МЫ В ОНЛАЙН-ЧАТАХ</span>
+            <div class="social"><a class="social__item" href="#"><img src="assets/images/footer/viber.png"/></a><a class="social__item" href="#"><img src="assets/images/footer/whatsapp.png"/></a><a class="social__item" href="#"><img src="assets/images/footer/telegram.png"/></a>
+            </div><span class="footer__title footer__title-second">МЫ В СОЦСЕТЯХ</span>
+            <div class="social"><a class="social__item social__link bg-vk" href="#"><i class="fa fa-vk"></i></a><a class="social__item social__link bg-fb" href="#"><i class="fa fa-facebook"></i></a><a class="social__item social__link bg-ok" href="#"><i class="fa fa-odnoklassniki"></i></a>
+            </div>
+          </div>
+          <div class="footer__item"><span class="footer__title">КОНТАКТЫ</span><span class="footer__text">Тел.: 8 800 100-44-99</span><span class="footer__text">Моб.: +7-985-100-44-99</span><span class="footer__text">
+            Адрес: г. Москва, <br>ул. Коминтерна, д. 7 к2</span>
+          </div>
+        </div>
+        <div class="footer__bottom"><a class="logo" href="/"><span class="logo__top"><span class="logo__main c-white">saldy</span><span class="logo__circle bg-pink"><span>s</span></span></span><span class="logo__bottom c-pink fw-bold fz9">Скидки каждый день</span></a>
+          <div class="d-flex flex-column mt10"><span>© 2018 ООО «Сэлди»</span><span>Официальный сайт www.saldy.ru</span></div>
+        </div>
+      </footer>
+    </div>
+    <script src="assets/libs/jquery-3.3.1.min.js"></script>
+    <script src="assets/libs/svg-injector.js"></script>
+    <script src="assets/libs/select2/select2.min.js"></script>
+    <script src="assets/libs/mCustomScrollbar/jquery.mCustomScrollbar.js"></script>
+    <script src="assets/libs/slick/slick.min.js"></script>
+    <script src="assets/libs/video.js/video.js"></script>
+    <script src="assets/libs/jquery.dotdotdot.js"></script>
+    <script src="assets/libs/masonry.pkgd.min.js"></script>
+    <script src="assets/libs/zoomsl-3.0.min.js"></script>
+    <script src="assets/js/classes/Tabs.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

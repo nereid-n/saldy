@@ -1,0 +1,36 @@
+mixin payment()
+  section.payment-wrap
+    +b.section-top
+      h2.title-section ОПЛАТА СЧЕТА
+    +b.payment
+      h3.fw-bold.fz18.my0 Варианты оплаты
+      +e.items
+        -
+          var data = [
+            'assets/images/payment/sber-bank.png',
+            'assets/images/payment/yandex-money.png',
+            'assets/images/payment/alfa-bank.png',
+            'assets/images/payment/qiwi.png',
+            'assets/images/payment/tinkoff-bank.png'
+          ]
+        each item in data
+          +e.item
+            +e.img
+              img.img-brand(src= item)
+            +e.text
+              span.text-uppercase.mb10 Перевод на карту Сбербанка
+              .d-flex
+                +e.text-left
+                  span Номер карты:
+                +e.text-right
+                  span 1111 2222 3333 4444
+              .d-flex
+                +e.text-left
+                  span Получатель:
+                +e.text-right
+                  span Иван Иванович В.
+              span.mt10.c-pink Комментарии к платежу не писать!
+        +e.item
+          +e.__item-end
+            p.mb10.mt0 Если у вас возникли трудности с оплатой, ознакомьтесь с инструкцией по оплате
+            a(href="#") Как оплатить счет?

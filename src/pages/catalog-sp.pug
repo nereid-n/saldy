@@ -1,0 +1,12 @@
+extends ../components/layout-default/layout-default
+include ../components/main/breadcrumbs/breadcrumbs
+include ../components/catalog/catalog-sp/catalog-sp
+
+block head
+  - var pageTitle = 'Каталог';
+
+block content
+  - var breadcrumbs = ['Все совместные покупки']
+
+  +breadcrumbs(breadcrumbs)
+  +catalog-sp()

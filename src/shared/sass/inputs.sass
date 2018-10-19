@@ -3,13 +3,21 @@
 input,
 textarea,
 select
+  max-width: 100%
   padding: 12px 15px
   border: 1px solid $border-input
   border-radius: $border-radius
   color: inherit
   background-color: transparent
+  resize: none
   &:focus
     border: 1px solid transparentize($pink, 0.6)
+
+input
+  width: 250px
+
+textarea
+  min-height: 150px
 
 .input-width-btn
   border-top-right-radius: 0
@@ -75,6 +83,8 @@ input[type='number']
         box-shadow: $shadow 
 
 .filter-select
+  .select2-container
+    min-width: 90px
   .select2-container--default .select2-selection--single .select2-selection__arrow b
     top: calc(50% - 4px)
     width: 8px
@@ -83,7 +93,8 @@ input[type='number']
     border-style: solid
     border-width: 2px 2px 0 0
     transform: rotate(135deg)
-  .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b
+  .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b,
+  .select2-container--default.select2-no-placeholder .select2-selection--single .select2-selection__arrow b
     top: 50%
     transform: rotate(-45deg)
   .select2-results
@@ -112,6 +123,10 @@ input[type='number']
     padding: 6px 8px
     &:hover
       color: $pink !important
+  .select2-container--default .select2-selection--single .select2-selection__placeholder
+    color: $black
+  .select2-container--default .select2-selection--single .select2-selection__rendered
+    color: $pink
 
 .checkbox
   position: relative

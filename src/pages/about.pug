@@ -1,0 +1,11 @@
+extends ../components/layout-default/layout-default
+include ../components/main/breadcrumbs/breadcrumbs
+include ../components/about/about
+
+block head
+  - var pageTitle = 'О нас';
+
+block content
+  - var breadcrumbs = ['О нас']
+  +breadcrumbs(breadcrumbs)
+  +about()

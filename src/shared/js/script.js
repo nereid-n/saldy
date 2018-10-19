@@ -37,6 +37,8 @@ $(document).ready(function() {
           scrollEasing: "linear",
           scrollInertia: 150
         });
+      }).on("change", function() {
+        this.closest('.wrap-select').querySelector('.select2').classList.add('select2-no-placeholder');
       });
     });
   }

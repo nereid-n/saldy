@@ -1,0 +1,11 @@
+extends ../components/layout-default/layout-default
+include ../components/main/breadcrumbs/breadcrumbs
+include ../components/contacts/contacts
+
+block head
+  - var pageTitle = 'Контакты';
+
+block content
+  - var breadcrumbs = ['Контакты']
+  +breadcrumbs(breadcrumbs)
+  +contacts()

@@ -1,0 +1,17 @@
+@import "../../shared/sass/vars"
+
+.fail
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding: 100px 0 70px
+  text-align: center
+  &__main
+    font-size: 320px
+    font-weight: 700
+    color: $border-input
+    line-height: 0.8em
+    @media (max-width: 767px)
+      font-size: 200px
+    @media (max-width: 575px)
+      font-size: 160px

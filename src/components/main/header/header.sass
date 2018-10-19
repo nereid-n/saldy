@@ -3,7 +3,7 @@
 .header
   display: flex
   flex-wrap: wrap
-  padding: 10px 20px
+  padding: 0 20px
   color: #fff
   background-color: $black
   &__nav
@@ -11,16 +11,22 @@
     flex-wrap: wrap
     margin: 0 0 0 -20px
     a
-      margin: 10px 20px
+      margin: 0 20px
+      padding: 20px 0 17px
       color: #ffffff
       text-decoration: none
+      border-bottom: 3px solid transparent
       &:hover
         color: $pink
+    &-active
+      border-bottom: 3px solid $pink !important
+      pointer-events: none
   &__points
     position: relative
     display: flex
     align-items: center
-    margin: 10px 0 10px auto
+    margin: 0 0 0 auto
+    padding: 20px 0
   &__select
     display: flex
     *:focus

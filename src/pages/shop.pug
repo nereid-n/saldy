@@ -1,0 +1,11 @@
+extends ../components/layout-default/layout-default
+include ../components/main/breadcrumbs/breadcrumbs
+include ../components/catalog/shop/shop
+
+block head
+  - var pageTitle = 'Shop';
+
+block content
+  - var breadcrumbs = ['Наращивание ресниц', 'Ресница для наращивания']
+  +breadcrumbs(breadcrumbs)
+  +shop()

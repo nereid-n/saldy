@@ -1,0 +1,267 @@
+include ../../elements/discount/discount
+
+mixin catalog-sp()
+  +b.catalog-product
+    +b.section-top.d-flex.justify-content-between.flex-wrap.align-items-center
+      .mr15
+        h2.title-section Каталог СП
+        +e.count 109 товаров
+    +b.filter
+      +e('span').item.fw-bold Фильтр
+      +e.item.wrap-select.filter-select
+        select.select(data-placeholder="Выкуп")
+          option
+          option 2 дня
+          option 3 дня
+          option 4 дня
+      +e.item.wrap-select.filter-select
+        select.select(data-placeholder="Собрано")
+          option
+          option 20%
+          option 30%
+          option 40%
+      +e.item.wrap-select.filter-select
+        select.select(data-placeholder="Скидка")
+          option
+          option -30%
+          option -42%
+          option -50%
+          option -55%
+      +e.item.checkbox-wrap
+        input(type="checkbox" id="check1")
+        label(for="check1")
+          .checkbox
+          | До выкупа меньше 24ч
+      +e.item.checkbox-wrap
+        input(type="checkbox" id="check2")
+        label(for="check2")
+          .checkbox
+          | Не показывать завершенные
+    -
+      var data = [
+      {
+      img: "assets/images/index/discount1.png",
+      discount: "40",
+      title: "BARBARA",
+      desc: "Материалы для наращивания и ламинирования ресниц",
+      time: "2 дня",
+      collect: "59"
+      },
+      {
+      img: "assets/images/index/discount2.png",
+      discount: "32",
+      title: "BARBARA",
+      desc: "Материалы для наращивания и ламинирования ресниц",
+      time: "3 дня",
+      collect: "43",
+      bgClass: "bg-gold",
+      like: "like-active"
+      },
+      {
+      img: "assets/images/index/discount3.png",
+      discount: "56",
+      title: "BARBARA",
+      desc: "Материалы для оформления и окрашивания бровей",
+      time: "16:31:48",
+      collect: "91"
+      },
+      {
+      img: "assets/images/index/discount4.png",
+      discount: "33",
+      title: "BARBARA",
+      desc: "Материалы для оформления и окрашивания бровей",
+      time: "Завершено",
+      collect: "118",
+      className: "card-disabled"
+      },
+      {
+      img: "assets/images/index/discount2.png",
+      discount: "32",
+      title: "BARBARA",
+      desc: "Материалы для наращивания и ламинирования ресниц",
+      time: "3 дня",
+      collect: "43",
+      bgClass: "bg-gold",
+      like: "like-active"
+      },
+      {
+      img: "assets/images/index/discount3.png",
+      discount: "56",
+      title: "BARBARA",
+      desc: "Материалы для оформления и окрашивания бровей",
+      time: "16:31:48",
+      collect: "91"
+      },
+      {
+      img: "assets/images/index/discount4.png",
+      discount: "33",
+      title: "BARBARA",
+      desc: "Материалы для оформления и окрашивания бровей",
+      time: "Завершено",
+      collect: "118",
+      className: "card-disabled"
+      },
+      {
+      img: "assets/images/index/discount2.png",
+      discount: "32",
+      title: "BARBARA",
+      desc: "Материалы для наращивания и ламинирования ресниц",
+      time: "3 дня",
+      collect: "43",
+      bgClass: "bg-gold",
+      like: "like-active"
+      },
+      {
+      img: "assets/images/index/discount3.png",
+      discount: "56",
+      title: "BARBARA",
+      desc: "Материалы для оформления и окрашивания бровей",
+      time: "16:31:48",
+      collect: "91"
+      },
+      {
+      img: "assets/images/index/discount4.png",
+      discount: "33",
+      title: "BARBARA",
+      desc: "Материалы для оформления и окрашивания бровей",
+      time: "Завершено",
+      collect: "118",
+      className: "card-disabled"
+      },
+      {
+      img: "assets/images/index/discount2.png",
+      discount: "32",
+      title: "BARBARA",
+      desc: "Материалы для наращивания и ламинирования ресниц",
+      time: "3 дня",
+      collect: "43",
+      bgClass: "bg-gold",
+      like: "like-active"
+      },
+      {
+      img: "assets/images/index/discount3.png",
+      discount: "56",
+      title: "BARBARA",
+      desc: "Материалы для оформления и окрашивания бровей",
+      time: "16:31:48",
+      collect: "91"
+      }
+      ]
+    .d-flex.flex-wrap
+      +b('ul').catalog-menu
+        -
+          var menu = [
+          {
+          title: "Клей для наращивания",
+          number: "328",
+          items: [
+          {
+          title: "Клей быстрый (до 1 сек)",
+          number: "117"
+          },
+          {
+          title: "Клей средний (от 1 сек)",
+          number: "96"
+          },
+          {
+          title: "Клей медленный (1,5 сек)",
+          number: "55"
+          }
+          ]
+          },
+          {
+          title: "Клей для наращивания",
+          number: "41"
+          },
+          {
+          title: "Препараты",
+          number: "187"
+          },
+          {
+          title: "Ламинирование и биозавивка",
+          number: "187"
+          },
+          {
+          title: "Полуперманентная тушь",
+          number: "165"
+          },
+          {
+          title: "Изоляция нижних ресниц",
+          number: "201"
+          },
+          {
+          title: "Пинцеты",
+          number: "23"
+          },
+          {
+          title: "Профессиональное освещение",
+          number: "14"
+          },
+          {
+          title: "Средства по уходу",
+          number: "11"
+          },
+          {
+          title: "Фирменная одежда",
+          number: "28"
+          },
+          {
+          title: "Расходные материалы ",
+          number: "89"
+          },
+          {
+          title: "Фирменная продукция",
+          number: "18"
+          },
+          {
+          title: "Хранение",
+          number: "61"
+          },
+          {
+          title: "Стартовые наборы",
+          number: "6"
+          },
+          {
+          title: "Оформление бровей",
+          number: "32"
+          }
+          ]
+        each item in menu
+          +e('li').item.__item-js
+            +e('span').title= item.title
+            span.fz12.c-gray= item.number
+            +e('ul').submenu
+              each subItem in menu[0].items
+                +e('a').item(href="#")
+                  +e('span').title= subItem.title
+                  span.fz12.c-gray= subItem.number
+      .catalog-right
+        .grid
+          each item in data
+            - var className = `card-normal grid-item ${item.className}`
+            +discount(className, item)
+    .products-bottom
+      +b('nav').catalog-pages
+        +e('a').item.mr-auto(href="#")
+          i.fa.fa-angle-left
+        - for (var i = 0; i < 9; i++)
+          - if (i === 4)
+            +e('a').item.__item-active(href="#")= i + 1
+          - else
+            +e('a').item(href="#")= i + 1
+        +e('a').item.ml-auto(href="#")
+          i.fa.fa-angle-right
+      +b.products-count
+        +e('span').item Товаров на странице
+        .d-flex.flex-wrap
+          +e.item.round-radio
+            input(type="radio" id="count1" name="radio-count")
+            label(for="count1")  24
+          +e.item.round-radio
+            input(type="radio" id="count2" name="radio-count")
+            label(for="count2")  48
+          +e.item.round-radio
+            input(type="radio" id="count3" name="radio-count")
+            label(for="count3")  96
+
+

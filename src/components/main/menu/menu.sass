@@ -8,6 +8,8 @@
   justify-content: flex-end
   padding: 0 20px
   border-bottom: 1px solid $border-light-gray
+  @media (max-width: 575px)
+    padding: 0
   &__btn-catalog
     display: flex
     align-items: center
@@ -16,6 +18,8 @@
     background-color: transparent
     border: none
     cursor: pointer
+    @media (max-width: 575px)
+      margin: 20px 30px 20px 20px
     .fa-bars
       margin-right: 10px
       font-size: 21px

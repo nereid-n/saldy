@@ -8,15 +8,17 @@ mixin catalog-product-general()
     +b.filter
       +e('span').item.fw-bold Фильтр
       +e.item.wrap-select.filter-select
-        select.select
-          option Бренд
-          option Изгиб
-          option Цвет
+        select.select(data-placeholder="Бренд")
+          option
+          option CC BROW
+          option BARBARA
+          option ENIGMA
       +e.item.wrap-select.filter-select
-        select.select
-          option Изгиб
-          option Цвет
-          option Бренд
+        select.select(data-placeholder="Цвет")
+          option
+          option Чёрные
+          option Коричневые
+          option Цветные
       .ml-auto.d-flex.flex-wrap.align-items-center
         +e('span').item.fw-bold Сортировка
         +e.item.wrap-select.filter-select

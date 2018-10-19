@@ -15,7 +15,7 @@
   <body>
     <div class="root">
       <header class="header">
-        <nav class="header__nav"><a href="#">О Нас</a><a href="#">Как заказать</a><a href="#">Доставка</a><a href="#">Новости</a><a href="#">Отзывы</a><a href="#">Поставщикам</a><a href="#">Контакты</a>
+        <nav class="header__nav"><a href="#">О Нас</a><a href="#">Как заказать</a><a href="#">Доставка</a><a href="#">Новости</a><a href="#">Отзывы</a><a href="#">Поставщикам</a><a class="header__nav-active" href="#">Контакты</a>
         </nav>
         <div class="header__points"><img src="assets/images/icons/Plane.png"/>
           <div class="header__select wrap-select">
@@ -323,17 +323,19 @@
           </div>
           <div class="filter"><span class="filter__item fw-bold">Фильтр</span>
             <div class="filter__item wrap-select filter-select">
-              <select class="select">
-                <option>Бренд</option>
-                <option>Изгиб</option>
-                <option>Цвет</option>
+              <select class="select" data-placeholder="Бренд">
+                <option></option>
+                <option>CC BROW</option>
+                <option>BARBARA</option>
+                <option>ENIGMA</option>
               </select>
             </div>
             <div class="filter__item wrap-select filter-select">
-              <select class="select">
-                <option>Изгиб</option>
-                <option>Цвет</option>
-                <option>Бренд</option>
+              <select class="select" data-placeholder="Цвет">
+                <option></option>
+                <option>Чёрные</option>
+                <option>Коричневые</option>
+                <option>Цветные</option>
               </select>
             </div>
             <div class="ml-auto d-flex flex-wrap align-items-center"><span class="filter__item fw-bold">Сортировка</span>

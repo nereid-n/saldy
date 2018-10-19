@@ -1,0 +1,24 @@
+mixin contacts()
+  section.contacts-wrap
+    +b.section-top
+      h2.title-section Контакты
+    +b.contacts
+      +e.main
+        p.mt0.mb5.fz18 Вы можете связаться с нами
+        p.mt0.mb5.c-pink По телефону с 8:00 до 20:00 (по московскому времени)
+        p.mt0.mb30 8-800-80-80-80 (бесплатно по России)
+        p.mt0.mb5.c-pink По электронной почте:
+        p.mt0.mb30 support@myspclub.ru
+        p.mt0.mb5.c-pink По вопросам сотрудничества:
+        p.mt0.mb5 partner@myspclub.ru (для поставщиков)
+        p.mt0.mb30 pr@myspclub.ru (для рекламы и маркетинга)
+        p.mt0.mb5.c-pink Юридический адрес:
+        p.mt0.mb30 Россия, 175019, г. Королев, ул. Пионерская, дом 2А, строение 18
+        p.mt0.mb5.c-pink Фактический адрес:
+        p.mt0.mb0 Россия, 175019, г. Королев, ул. Пионерская, дом 2А, строение 18
+      +e.form-wrap
+        p.mt0.fz18.fw-bold Напишите нам через форму ниже:
+        +e('form').form
+          input(placeholder="Тема сообщения").mb20
+          textarea(placeholder="Тема сообщения").width100.mb30
+          button.btn.bg-pink.ml-auto ОТПРАВИТЬ СООБЩЕНИЕ

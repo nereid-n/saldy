@@ -1,0 +1,36 @@
+@import "../../../shared/sass/vars"
+
+.sp
+  display: flex
+  flex-wrap: wrap
+  padding-bottom: 20px
+  border-bottom: 1px solid $border-light-gray
+  &__img-wrap
+    width: calc(30%)
+    padding: 0 20px
+    margin-top: 25px
+    @media (max-width: 1199px)
+      width: 50%
+    @media (max-width: 767px)
+      width: 100%
+      padding: 0
+    img
+      max-width: 300px
+      @media (max-width: 575px)
+        max-width: 100%
+  &__main-wrap
+    width: calc(30%)
+    padding: 0 20px
+    margin-top: 25px
+    @media (max-width: 1199px)
+      width: 50%
+    @media (max-width: 767px)
+      width: 100%
+      padding: 0
+  &__tabs-wrap
+    padding: 0 20px
+    width: calc(40%)
+    @media (max-width: 1199px)
+      width: 100%
+    @media (max-width: 767px)
+      padding: 0

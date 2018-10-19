@@ -1,0 +1,8 @@
+extends ../components/layout-default/layout-default
+include ../components/fail/fail
+
+block head
+  - var pageTitle = 'Ошибка';
+
+block content
+  +fail()

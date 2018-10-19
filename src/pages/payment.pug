@@ -1,0 +1,12 @@
+extends ../components/layout-default/layout-default
+include ../components/main/breadcrumbs/breadcrumbs
+include ../components/payment/payment
+
+block head
+  - var pageTitle = 'Оплата счёта';
+
+block content
+  - var breadcrumbs = ['Оплата счёта']
+
+  +breadcrumbs(breadcrumbs)
+  +payment()

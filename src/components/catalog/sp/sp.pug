@@ -1,0 +1,118 @@
+mixin sp()
+  +b.sp
+    +e.img-wrap
+      img(src="assets/images/index/discount1.png")
+    +e.main-wrap
+      .d-flex.align-items-center.mb5
+        h3.card-title.mr20.my0 СП BARBARA
+        img.like.inject-me.ml-auto(src='assets/images/icons/favorite.svg')
+      .d-flex.mb10
+        span.fw-bold.mr20 Бренды:
+        span Barbara
+      .d-flex.mb10
+        span.fw-bold.mr20 Товары:
+        span Материалы для наращивания и ламинирования ресниц
+      .d-flex.mb10
+        span.fw-bold.mr20 Макс. скидка:
+        span.c-pink 40%
+      .d-flex.mb10
+        span.fw-bold.mr20 Мин. заказ:
+        span 3000 руб.
+      .d-flex.mb10
+        span.fw-bold.mr20 Оплата:
+        span После заказа
+      .d-flex.mb10
+        span.fw-bold.mr20 Отправка:
+        span 3-4 раб. дня после выкупа
+      .d-flex.align-items-center.mb10
+        span.fw-bold.mr20 Выкуп:
+        .label.bg-pink 2 дня
+      .d-flex.align-items-center.mb10
+        span.fw-bold.mr20 Собрано:
+        .progress-wrap.ml10
+          .progress-bar
+            .progress.bg-pink(style="width: 59%")
+          span.progress-percent 59%
+      .d-flex.align-items-center.mb10
+        span.fw-bold.mr20 Доставка с:
+        span 20.09.2018
+      a(href="#") Как заказывать в СП?
+    +e.tabs-wrap
+      .detail__tabs
+        a.detail__tab-item.tab-item.tab-item-active.tab-item-js(href="#description") Описание
+        a.detail__tab-item.tab-item.tab-item-js(href="#reviews") Отзывы о товаре
+        a.detail__tab-item.tab-item.tab-item-js(href="#payment") Доставка и оплата
+      .tab-content-js.tab-content-active(id="description")
+        .detail__tab-content
+          p Объем: 5 мл <br>
+            | Скорость сцепки: 1 секунда. Идеален для опытных мастеров. <br>
+            | Срок носки: 7-8 недель. <br>
+            | Испарения: минимальные. Клей чёрного цвета с жидкой консистенцией и средней эластичностью. С ним вы сможете оперативно поправить любой недочёт, разъединить склейку или убрать излишек клея до его застывания. Условия работы: влажность 40-70%, температура 18-23°С <br>
+            | Срок годности: 6 месяцев, срок хранения в открытом виде — 2 месяца.
+      .tab-content-js(id="reviews")
+        .detail__tab-content
+          +b.slick-review
+            - for(let i = 0; i < 5; i++)
+            +e.item
+              .d-flex.flex-column
+                .d-flex.align-items-center
+                  span.mr15 Ангелина
+                  .d-flex.align-items-center.c-gray
+                    img(src="assets/images/icons/clock.svg").icon-small.icon-gray.inject-me.mx5
+                    span 11.09.2018
+                .rating.my10
+                  i.fa.fa-star.c-gold
+                  i.fa.fa-star.c-gold
+                  i.fa.fa-star.c-gold
+                  i.fa.fa-star.c-gray-input
+                  i.fa.fa-star.c-gray-input
+                p Отличный клей, но немного жидковат. Очень быстрый, брать только профи, потому что новичку будет трудно за ним успевать. Доставили за неделю. Я довольна)
+              +e.answer
+                .d-flex.align-items-center.mb5
+                  span.mr15 MYSPCLUB
+                  .d-flex.align-items-center.c-gray
+                    img(src="assets/images/icons/clock.svg").icon-small.icon-gray.inject-me.mx5
+                    span 11.09.2018
+                p Ангелина, спасибо за отзыв! Рады что Вам понравился наш сервис)
+      .tab-content-js(id="payment")
+        .detail__tab-content
+          .d-flex.mb10
+            .detail__payment-first
+              span Доставка в:
+            .detail__payment-second
+              span.c-pink Воронеж
+              span.detail__small-link.ml10 (изменить)
+              span.detail__points 8 пунктов выдачи
+          .d-flex.c-gray
+            .detail__payment-first
+              span СДЭК:
+            .detail__payment-second
+              span.fz12 310 руб, 2-3 дня
+          .d-flex.c-gray
+            .detail__payment-first
+              span Boxberry:
+            .detail__payment-second
+              span.fz12 260 руб, 2-3 дня
+          .d-flex.c-gray
+            .detail__payment-first
+              span Почта России:
+            .detail__payment-second
+              span.fz12 от 280 руб, от 3 дней
+          .d-flex.flex-wrap.align-items-center.mt20
+            span.mr20 Оплата:
+            img.detail__vallet(src="assets/images/footer/viza.png")
+            img.detail__vallet(src="assets/images/footer/mast1.png")
+            img.detail__vvallet(src="assets/images/footer/mast2.png")
+            img.detail__vallet(src="assets/images/detail/qiwi.png")
+            img.detail__vallet(src="assets/images/detail/yandex.png")
+      .d-flex.align-items-center.flex-wrap
+        a(href="#").c-pink.mr20.my10 Помочь собрать закупку?
+        .d-flex.align-items-center.flex-wrap
+          span.mr10 Поделиться:
+          +b.social
+            +e('a').item.__link.bg-vk(href="#")
+              i.fa.fa-vk
+            +e('a').item.__link.bg-fb(href="#")
+              i.fa.fa-facebook
+            +e('a').item.__link.bg-ok(href="#")
+              i.fa.fa-odnoklassniki
