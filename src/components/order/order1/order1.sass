@@ -3,6 +3,10 @@
 .order
   display: flex
   padding: 30px 20px 70px
+  @media (max-width: 991px)
+    flex-wrap: wrap
+  @media (max-width: 575px)
+    padding: 20px 0 70px
   &__nav
     display: flex
     flex-direction: column
@@ -19,5 +23,8 @@
         color: $pink
         pointer-events: none
   &__main
+    max-width: 100%
+    @media (max-width: 991px)
+      margin-top: 30px
     p
       margin: 0
