@@ -1,3 +1,42 @@
 mixin order10()
-	+b.order10
-		block
+  section.order-wrap
+    +b.section-top
+      h2.title-section Как заказать
+    +b.order
+      +e('nav').nav
+        -
+          var links = [
+          'Что такое СП',
+          'Что такое MYSPCLUB',
+          'Регистрация',
+          'Аккаунт',
+          'Термины и обозначения',
+          'Оформление заказа',
+          'Доставка и оплата',
+          'Раздел SHOP',
+          'Рассылка (sms, e-mail)',
+          {
+          active: true,
+          title: 'Написать в службу поддержки'
+          }
+          ]
+        each link in links
+          if link.active
+            +e('a').nav-item.__nav-item-active(href="#")= link.title
+          else
+            +e('a').nav-item(href="#")= link
+      +e.main
+        h3.mt0.fz18.fw-bold Написать в службу поддержки
+        p.c-pink Если вы не нашли ответ на свой вопрос, напишите нам, используя форму ниже
+        form.mt30(enctype="multipart/form-data")
+          .input-file-main
+            +e.textarea
+              textarea.width100(placeholder="Текст сообщения")
+              +e.input-file.input-file-wrap
+                input(type="file")
+                .input-file
+                  i.fa.fa-paperclip
+                  span Прикрепить фото
+            .d-flex
+              +e('span').input-file-text.input-file-text
+          button(type="submit").btn.bg-pink.ml-auto.mt5 НАПИСАТЬ В ПОДДЕРЖКУ

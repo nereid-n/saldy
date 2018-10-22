@@ -1,0 +1,12 @@
+extends ../components/layout-default/layout-default
+include ../components/main/breadcrumbs/breadcrumbs
+include ../components/order/order4/order4
+
+block head
+  - var pageTitle = 'Как заказать';
+
+block content
+  - var breadcrumbs = ['Как заказать']
+
+  +breadcrumbs(breadcrumbs)
+  +order4()

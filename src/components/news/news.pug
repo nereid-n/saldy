@@ -1,0 +1,61 @@
+mixin news()
+  section.news-wrap
+    +b.section-top
+      h2.title-section Новости
+      .news__tab
+        a.news__tab-item.tab-item.tab-item-active.tab-item-js(href="#new") Новые
+        a.news__tab-item.tab-item.tab-item-js(href="#old") Старые
+    +b.news
+      +b('ul').catalog-menu
+        -
+          var menu = [
+            {
+              title: 'Для мастеров',
+              number: '6'
+            },
+            {
+              title: 'Товары для детей',
+              number: '11'
+            },
+            {
+              title: 'Женский шопинг ',
+              number: '17'
+            },
+            {
+              title: 'Смартфоны',
+              number: '4'
+            },
+            {
+              title: 'Электроника',
+              number: '10'
+            }
+          ]
+        .fw-semibold Тема
+        each item in menu
+          +e('li').item.__item-js.ml20.mt5
+            +e('span').title= item.title
+            span.fz12.c-gray= item.number
+        -
+          var menu = [
+            {
+              title: 'Статья',
+              number: '49'
+            },
+            {
+              title: 'Видео ',
+              number: '18'
+            },
+            {
+              title: 'Обзоры',
+              number: '55'
+            },
+            {
+              title: 'Новости компании',
+              number: '27'
+            }
+          ]
+        .fw-semibold.mt10 Тип
+        each item in menu
+          +e('li').item.__item-js.ml20.mt5
+            +e('span').title= item.title
+            span.fz12.c-gray= item.number

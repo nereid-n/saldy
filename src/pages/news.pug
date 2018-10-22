@@ -1,0 +1,12 @@
+extends ../components/layout-default/layout-default
+include ../components/main/breadcrumbs/breadcrumbs
+include ../components/news/news
+
+block head
+  - var pageTitle = 'Новости';
+
+block content
+  - var breadcrumbs = ['Новости']
+
+  +breadcrumbs(breadcrumbs)
+  +news()

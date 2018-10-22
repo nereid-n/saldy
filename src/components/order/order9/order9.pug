@@ -1,3 +1,32 @@
 mixin order9()
-	+b.order9
-		block
+  section.order-wrap
+    +b.section-top
+      h2.title-section Как заказать
+    +b.order
+      +e('nav').nav
+        -
+          var links = [
+          'Что такое СП',
+          'Что такое MYSPCLUB',
+          'Регистрация',
+          'Аккаунт',
+          'Термины и обозначения',
+          'Оформление заказа',
+          'Доставка и оплата',
+          'Раздел SHOP',
+          {
+          active: true,
+          title: 'Рассылка (sms, e-mail)'
+          },
+          'Написать в службу поддержки'
+          ]
+        each link in links
+          if link.active
+            +e('a').nav-item.__nav-item-active(href="#")= link.title
+          else
+            +e('a').nav-item(href="#")= link
+      +e.main
+        h3.mt0.fz18.fw-bold Рассылка (sms, e-mail)
+        p.c-pink Где я могу подписаться на подписку?
+        p Вы можете оформить или отказаться от рассылки в Личном кабинете на вкладке “Настройки”.
+

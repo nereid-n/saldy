@@ -243,4 +243,25 @@ if ($('.main-slick-js').length > 0) {
     }]
   });
 }
+
+if (document.querySelector('.input-file-main')) {
+  var inputs = document.querySelectorAll('.input-file-wrap input[type=file]');
+
+  var _loop = function _loop(_i) {
+    var parent = inputs[_i].closest('.input-file-main');
+    var text = parent.querySelector('.input-file-text');
+    inputs[_i].onchange = function () {
+      if (this.value !== '') {
+        text.innerHTML = 'Успешно добавлено';
+      }
+      setTimeout(function () {
+        text.innerHTML = '';
+      }, 3000);
+    };
+  };
+
+  for (var _i = 0; _i < inputs.length; _i++) {
+    _loop(_i);
+  }
+}
 //# sourceMappingURL=script.js.map
