@@ -1,0 +1,18 @@
+mixin brands()
+  section.brands-wrap
+    +b.section-top
+      h2.title-section Бренды
+      .brands__tab
+        a.brands__tab-item.tab-item.tab-item-active.tab-item-js(href="#all") Все бренды
+        a.brands__tab-item.tab-item.tab-item-js(href="#favorite") Ваши любимые бренды
+    +b.brands
+      +e.filter
+        div
+          -
+            var filter1 = ["0-9", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+            var filter2 = ["а", "б", "в", "г", "д", "е", "ё", "ж", "з", "и", "й", "к", "л", "м", "н", "о", "п", "р", "с", "т", "у", "ф", "х", "ц", "ч", "ш", "щ", "э", "ю", "я"];
+          each item in filter1
+            +e('a').filter-item(href="#")= item
+        div
+          each item in filter2
+            +e('a').filter-item(href="#")= item

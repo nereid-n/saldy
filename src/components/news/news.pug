@@ -1,4 +1,6 @@
-mixin news()
+include ../elements/news/news
+
+mixin news-main()
   section.news-wrap
     +b.section-top
       h2.title-section Новости
@@ -6,56 +8,168 @@ mixin news()
         a.news__tab-item.tab-item.tab-item-active.tab-item-js(href="#new") Новые
         a.news__tab-item.tab-item.tab-item-js(href="#old") Старые
     +b.news
-      +b('ul').catalog-menu
-        -
-          var menu = [
-            {
-              title: 'Для мастеров',
-              number: '6'
-            },
-            {
-              title: 'Товары для детей',
-              number: '11'
-            },
-            {
-              title: 'Женский шопинг ',
-              number: '17'
-            },
-            {
-              title: 'Смартфоны',
-              number: '4'
-            },
-            {
-              title: 'Электроника',
-              number: '10'
-            }
-          ]
-        .fw-semibold Тема
-        each item in menu
-          +e('li').item.__item-js.ml20.mt5
-            +e('span').title= item.title
-            span.fz12.c-gray= item.number
-        -
-          var menu = [
-            {
-              title: 'Статья',
-              number: '49'
-            },
-            {
-              title: 'Видео ',
-              number: '18'
-            },
-            {
-              title: 'Обзоры',
-              number: '55'
-            },
-            {
-              title: 'Новости компании',
-              number: '27'
-            }
-          ]
-        .fw-semibold.mt10 Тип
-        each item in menu
-          +e('li').item.__item-js.ml20.mt5
-            +e('span').title= item.title
-            span.fz12.c-gray= item.number
+      .d-flex.flex-wrap
+        +b('ul').catalog-menu
+          -
+            var menu = [
+              {
+                title: 'Для мастеров',
+                number: '6'
+              },
+              {
+                title: 'Товары для детей',
+                number: '11'
+              },
+              {
+                title: 'Женский шопинг ',
+                number: '17'
+              },
+              {
+                title: 'Смартфоны',
+                number: '4'
+              },
+              {
+                title: 'Электроника',
+                number: '10'
+              }
+            ]
+          .fw-semibold Тема
+          each item in menu
+            +e('li').item.__item-js.ml20.mt5
+              +e('span').title= item.title
+              span.fz12.c-gray= item.number
+          -
+            var menu = [
+              {
+                title: 'Статья',
+                number: '49'
+              },
+              {
+                title: 'Видео ',
+                number: '18'
+              },
+              {
+                title: 'Обзоры',
+                number: '55'
+              },
+              {
+                title: 'Новости компании',
+                number: '27'
+              }
+            ]
+          .fw-semibold.mt10 Тип
+          each item in menu
+            +e('li').item.__item-js.ml20.mt5
+              +e('span').title= item.title
+              span.fz12.c-gray= item.number
+        .catalog-right
+          .tab-content-js.tab-content-active(id="new")
+            .grid
+              -
+                var data = [
+                  {
+                  img: "assets/images/index/news2.png",
+                  title: "Снижение цены на ботокс",
+                  desc: "Скидка на ботокс -30% только до конца сентября...",
+                  more: true,
+                  moreTitleTop: "Ботокс",
+                  moreTitleBottom: "для ресниц",
+                  oldPrice: "2490",
+                  newPrice: "1992"
+                  },
+                  {
+                  img: "assets/images/index/news1.png",
+                  title: "Оптовые цены на всё!",
+                  desc: "Мы открываем осенний сезон, горячими скидками на все группы товаров..."
+                  },
+                  {
+                  img: "assets/images/index/news2.png",
+                  title: "Снижение цены на ботокс",
+                  desc: "Скидка на ботокс -30% только до конца сентября...",
+                  more: true,
+                  moreTitleTop: "Ботокс",
+                  moreTitleBottom: "для ресниц",
+                  oldPrice: "2490",
+                  newPrice: "1992"
+                  },
+                  {
+                  img: "assets/images/index/news2.png",
+                  title: "Снижение цены на ботокс",
+                  desc: "Скидка на ботокс -30% только до конца сентября...",
+                  more: true,
+                  moreTitleTop: "Ботокс",
+                  moreTitleBottom: "для ресниц",
+                  oldPrice: "2490",
+                  newPrice: "1992"
+                  },
+                  {
+                  img: "assets/images/index/news1.png",
+                  title: "Оптовые цены на всё!",
+                  desc: "Мы открываем осенний сезон, горячими скидками на все группы товаров..."
+                  },
+                  {
+                  img: "assets/images/index/news2.png",
+                  title: "Снижение цены на ботокс",
+                  desc: "Скидка на ботокс -30% только до конца сентября...",
+                  more: true,
+                  moreTitleTop: "Ботокс",
+                  moreTitleBottom: "для ресниц",
+                  oldPrice: "2490",
+                  newPrice: "1992"
+                  },
+                  {
+                  img: "assets/images/index/news2.png",
+                  title: "Снижение цены на ботокс",
+                  desc: "Скидка на ботокс -30% только до конца сентября...",
+                  more: true,
+                  moreTitleTop: "Ботокс",
+                  moreTitleBottom: "для ресниц",
+                  oldPrice: "2490",
+                  newPrice: "1992"
+                  },
+                  {
+                  img: "assets/images/index/news1.png",
+                  title: "Оптовые цены на всё!",
+                  desc: "Мы открываем осенний сезон, горячими скидками на все группы товаров..."
+                  },
+                  {
+                  img: "assets/images/index/news2.png",
+                  title: "Снижение цены на ботокс",
+                  desc: "Скидка на ботокс -30% только до конца сентября...",
+                  more: true,
+                  moreTitleTop: "Ботокс",
+                  moreTitleBottom: "для ресниц",
+                  oldPrice: "2490",
+                  newPrice: "1992"
+                  }
+                ]
+              each item in data
+                +news("card-normal grid-item", item)
+          .tab-content-js(id="old")
+            .grid
+              each item in data
+                +news("card-normal grid-item", item)
+      .products-bottom
+        +b('nav').catalog-pages
+          +e('a').item.mr-auto(href="#")
+            i.fa.fa-angle-left
+          - for (var i = 0; i < 9; i++)
+            - if (i === 4)
+              +e('a').item.__item-active(href="#")= i + 1
+            - else
+              +e('a').item(href="#")= i + 1
+          +e('a').item.ml-auto(href="#")
+            i.fa.fa-angle-right
+        +b.products-count
+          +e('span').item Товаров на странице
+          .d-flex.flex-wrap
+            +e.item.round-radio
+              input(type="radio" id="count1" name="radio-count")
+              label(for="count1")  24
+            +e.item.round-radio
+              input(type="radio" id="count2" name="radio-count")
+              label(for="count2")  48
+            +e.item.round-radio
+              input(type="radio" id="count3" name="radio-count")
+              label(for="count3")  96
+
